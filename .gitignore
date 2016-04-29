@@ -1,0 +1,6 @@
+.DS_Store
+*.sql
+wp-cli.local.yml
+composer.lock
+node_modules/
+vendor/

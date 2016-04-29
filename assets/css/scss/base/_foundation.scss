@@ -1,0 +1,25 @@
+// Foundation by ZURB
+// foundation.zurb.com
+// Licensed under MIT Open Source
+
+@import '../../../lib/foundation/scss/normalize';
+@import 'foundation-settings';
+
+// Behold, here are all the Foundation components.
+@import '../../../lib/foundation/scss/foundation/components/grid',
+		'../../../lib/foundation/scss/foundation/components/alert-boxes',
+		'../../../lib/foundation/scss/foundation/components/breadcrumbs',
+		'../../../lib/foundation/scss/foundation/components/block-grid',
+		'../../../lib/foundation/scss/foundation/components/visibility',
+		'../../../lib/foundation/scss/foundation/components/type',
+		'../../../lib/foundation/scss/foundation/components/forms',
+		'../../../lib/foundation/scss/foundation/components/button-groups',
+		'../../../lib/foundation/scss/foundation/components/buttons',
+		'../../../lib/foundation/scss/foundation/components/inline-lists',
+		'../../../lib/foundation/scss/foundation/components/reveal',
+			'../../../lib/foundation/scss/foundation/components/side-nav',
+		'../../../lib/foundation/scss/foundation/components/tabs',
+		'../../../lib/foundation/scss/foundation/components/pagination',
+		'../../../lib/foundation/scss/foundation/components/panels',
+		'../../../lib/foundation/scss/foundation/components/progress-bars',
+		'../../../lib/foundation/scss/foundation/components/tables';

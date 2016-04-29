@@ -1,0 +1,3 @@
+[submodule "lib/rest-api"]
+	path = lib/rest-api
+	url = git@github.com:WP-API/WP-API.git
