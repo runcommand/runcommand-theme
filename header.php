@@ -15,6 +15,7 @@
 		<div class="row">
 			<div class="columns">
 				<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>">runcommand</a></h1>
+				<p class="description">The fastest way to do anything with WordPress</p>
 			</div>
 		</div>
 	</header>

@@ -4,7 +4,7 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider, connect } from 'react-redux';
 import { render } from 'react-dom';
 import thunk from 'redux-thunk'
-import App from './containers/app';
+import Home from './containers/home';
 import NotFound from './components/not-found';
 import reducer from './reducers';
 
@@ -12,6 +12,7 @@ const middleware = [ thunk ];
 
 const store = createStore(
 	reducer,
+	window.runcommandInitialState,
 	applyMiddleware(...middleware)
 );
 
@@ -20,7 +21,7 @@ store.dispatch({
 });
 
 const routes = (
-	<Route path="/" component={App}>
+	<Route path="/" component={Home}>
 		<Route path="*" component={NotFound} />
 	</Route>
 );
