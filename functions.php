@@ -71,6 +71,7 @@ class runcommand {
 	private function setup_controllers() {
 		$controllers = array(
 			'\runcommand\Assets',
+			'\runcommand\Content_Model',
 			'\runcommand\REST\API',
 		);
 		foreach( $controllers as $controller ) {

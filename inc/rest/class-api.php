@@ -4,11 +4,12 @@ namespace runcommand\REST;
 
 use runcommand\Controller;
 use WP_REST_Server;
+use WP_REST_Request;
 
 class API extends Controller {
 
 	protected function setup_actions() {
-		
+
 	}
 
 	protected function setup_filters() {
@@ -23,6 +24,23 @@ class API extends Controller {
 			}
 			return $endpoints;
 		});
+	}
+
+	public static function get_initial_state() {
+		$state = array();
+		foreach( array( 'commands' ) as $type ) {
+			$state[ $type ] = array(
+				'items'     => array(),
+			);
+		}
+
+		$request = new WP_REST_Request( 'GET', '/v1/commands' );
+		$response = rest_do_request( $request );
+		if ( ! $response->is_error() ) {
+			$state['commands']['items'] = $response->get_data();
+		}
+
+		return $state;
 	}
 
 }
