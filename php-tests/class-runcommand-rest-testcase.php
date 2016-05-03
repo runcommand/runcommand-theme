@@ -12,6 +12,10 @@ abstract class runcommand_REST_Testcase extends WP_UnitTestCase {
 		$this->server = $wp_rest_server = new WP_REST_Server;
 		do_action( 'rest_api_init' );
 
+		$this->admin1 = $this->factory->user->create( array(
+			'role' => 'administrator',
+		) );
+
 		$this->command1 = $this->factory->post->create( array(
 			'post_title'       => 'db ack',
 			'post_type'        => 'command',
