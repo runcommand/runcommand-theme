@@ -26474,6 +26474,15 @@
 					return _react2['default'].createElement(_componentsNotFound2['default'], { text: 'Command Not Found' });
 				}
 
+				var description = '';
+				if (!_underscore2['default'].isEmpty(command.description)) {
+					description = _react2['default'].createElement(
+						'p',
+						{ className: 'page-description' },
+						command.description
+					);
+				}
+
 				return _react2['default'].createElement(
 					'header',
 					{ className: 'page-header' },
@@ -26481,7 +26490,8 @@
 						'h2',
 						null,
 						command.title
-					)
+					),
+					description
 				);
 			}
 		}]);

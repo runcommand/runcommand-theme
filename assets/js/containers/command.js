@@ -15,9 +15,17 @@ export class Command extends Component {
 			);
 		}
 
+		let description = '';
+		if ( ! _.isEmpty( command.description ) ) {
+			description = (
+				<p className="page-description">{command.description}</p>
+			);
+		}
+
 		return (
 			<header className="page-header">
 				<h2>{command.title}</h2>
+				{description}
 			</header>
 		);
 	}

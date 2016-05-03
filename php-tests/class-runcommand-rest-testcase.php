@@ -20,7 +20,7 @@ abstract class runcommand_REST_Testcase extends WP_UnitTestCase {
 			'post_title'       => 'db ack',
 			'post_type'        => 'command',
 			'post_status'      => 'publish',
-			'post_excerpt'     => 'Search through the database for the string you think might be there.',
+			'post_excerpt'     => 'Find a specific string in the database.',
 		) );
 
 		static $did_once;
