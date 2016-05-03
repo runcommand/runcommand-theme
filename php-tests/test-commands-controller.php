@@ -19,7 +19,6 @@ class Test_Commands_Controller extends runcommand_REST_Testcase {
 		$request = new WP_REST_Request( 'POST', '/v1/commands' );
 		$request->set_param( 'title', 'user one-time-login' );
 		$request->set_param( 'description', 'Use WP-CLI to generate a one-time login URL for any user.' );
-		$request->set_param( 'status', 'publish' );
 		$response = $this->server->dispatch( $request );
 		$this->assertStatus( 201, $response );
 		$this->assertResponseData( array(
@@ -27,6 +26,14 @@ class Test_Commands_Controller extends runcommand_REST_Testcase {
 			'slug'          => 'user-one-time-login',
 			'type'          => 'command',
 			'description'   => 'Use WP-CLI to generate a one-time login URL for any user.',
+		), $response );
+		wp_set_current_user( 0 );
+		$data = $response->get_data();
+		$request = new WP_REST_Request( 'GET', '/v1/commands/' . $data['id'] );
+		$response = $this->server->dispatch( $request );
+		$this->assertStatus( 200, $response );
+		$this->assertResponseData( array(
+			'slug'          => 'user-one-time-login',
 		), $response );
 	}
 
