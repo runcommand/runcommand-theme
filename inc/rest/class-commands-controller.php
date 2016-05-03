@@ -31,6 +31,9 @@ class Commands_Controller extends Base_Posts_Controller {
 				$post = get_post( $resource['id'] );
 				return $post->post_excerpt;
 			},
+			'update_callback'     => function( $value, $post ) {
+				wp_update_post( array( 'ID' => $post->ID, 'post_excerpt' => $value ) );
+			},
 			'schema'              => array(
 				'description'     => 'Abbreviated description of what the command does.',
 				'type'            => 'string',
