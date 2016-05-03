@@ -3,6 +3,7 @@ import { Route, IndexRoute, Router, browserHistory } from 'react-router';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider, connect } from 'react-redux';
 import { render } from 'react-dom';
+import ga from 'react-ga';
 import thunk from 'redux-thunk'
 import Home from './containers/home';
 import Command from './containers/command';
@@ -50,9 +51,15 @@ const routes = (
 	</Route>
 );
 
+ga.initialize( window.runcommandGoogleAnalytics );
+
+const onUpdate = () => {
+	 ga.pageview( window.location.pathname );
+};
+
 render(
 	<Provider store={store}>
-		<Router history={browserHistory} routes={routes} />
+		<Router history={browserHistory} routes={routes} onUpdate={onUpdate} />
 	</Provider>,
 	document.getElementById('app')
 );
