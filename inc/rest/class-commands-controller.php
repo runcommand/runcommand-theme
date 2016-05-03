@@ -46,6 +46,8 @@ class Commands_Controller extends Base_Posts_Controller {
 	public function get_item_schema() {
 		$schema = parent::get_item_schema();
 
+		$schema['properties']['status']['default'] = 'publish';
+
 		// Unset attributes we don't want to use.
 		$unused_attributes = array(
 			'excerpt',
@@ -54,7 +56,6 @@ class Commands_Controller extends Base_Posts_Controller {
 			'password',
 			'modified',
 			'modified_gmt',
-			'status',
 		);
 		foreach( $unused_attributes as $attribute ) {
 			if ( isset( $schema['properties'][ $attribute ] ) ) {
@@ -74,7 +75,6 @@ class Commands_Controller extends Base_Posts_Controller {
 			'before',
 			'author',
 			'author_exclude',
-			'status',
 			'filter',
 		);
 		foreach( $unused_params as $param ) {
