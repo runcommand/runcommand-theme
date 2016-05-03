@@ -10,7 +10,7 @@ class Test_Commands_Controller extends runcommand_REST_Testcase {
 			'title'         => 'db ack',
 			'slug'          => 'db-ack',
 			'type'          => 'command',
-			'description'   => 'Search through the database for the string you think might be there.',
+			'description'   => 'Find a specific string in the database.',
 		), $response );
 	}
 

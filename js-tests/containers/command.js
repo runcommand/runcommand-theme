@@ -12,6 +12,7 @@ describe('<Command /> (containers)',() => {
 	it('renders with a found command', () => {
 		let component = shallow(<Command {...foundProps} />);
 		expect( component.find( 'h2' ).text() ).to.equal( 'db ack' );
+		expect( component.find( '.page-description' ).text() ).to.equal( 'Find a specific string in the database.' );
 	});
 
 	it('renders with a missing command', () => {
