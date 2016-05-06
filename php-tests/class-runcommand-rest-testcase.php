@@ -27,7 +27,7 @@ abstract class runcommand_REST_Testcase extends WP_UnitTestCase {
 		if ( ! isset( $did_once ) ) {
 			$initial_state = runcommand\REST\API::get_initial_state();
 			file_put_contents( dirname( dirname( __FILE__ ) ) . '/js-tests/initial-state.js', 'export default ' . json_encode( $initial_state ) );
-			$initial_state = true;
+			$did_once = true;
 		}
 
 	}
