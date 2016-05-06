@@ -28135,19 +28135,47 @@
 						_react2['default'].createElement(
 							'div',
 							{ className: 'columns' },
-							'Follow ',
 							_react2['default'].createElement(
-								'a',
-								{ href: 'https://twitter.com/runcommand' },
-								'@runcommand'
+								'p',
+								null,
+								'To learn more when there\'s more to know:'
 							),
-							' on Twitter. A project by ',
 							_react2['default'].createElement(
-								'a',
-								{ href: 'https://twitter.com/danielbachhuber' },
-								'@danielbachhuber'
+								'ul',
+								null,
+								_react2['default'].createElement(
+									'li',
+									null,
+									'Follow ',
+									_react2['default'].createElement(
+										'a',
+										{ href: 'https://twitter.com/runcommand' },
+										'@runcommand'
+									),
+									' on Twitter.'
+								),
+								_react2['default'].createElement(
+									'li',
+									null,
+									_react2['default'].createElement(
+										'a',
+										{ href: 'http://runcommand.us13.list-manage1.com/subscribe?u=65c9e1ec3c097ee95eb468c9f&id=5b6f61b116' },
+										'Sign up'
+									),
+									' for the mailing list.'
+								)
 							),
-							'.'
+							_react2['default'].createElement(
+								'p',
+								null,
+								'A project by ',
+								_react2['default'].createElement(
+									'a',
+									{ href: 'https://twitter.com/danielbachhuber' },
+									'@danielbachhuber'
+								),
+								'.'
+							)
 						)
 					)
 				);
