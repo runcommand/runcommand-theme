@@ -21,7 +21,7 @@
 			<div class="columns">
 				<ul class="inline-list right header-nav">
 					<li><a href="<?php echo esc_url( home_url( 'for-hosts/' ) ); ?>">For Hosts</a></li>
-					<li><a href="<?php echo esc_url( home_url( 'for-hosts/' ) ); ?>">For Agencies</a></li>
+					<li><a href="<?php echo esc_url( home_url( 'for-agencies/' ) ); ?>">For Agencies</a></li>
 					<li><a href="<?php echo esc_url( home_url( 'commands/' ) ); ?>">Commands</a></li>
 				</ul>
 			</div>
