@@ -61,7 +61,7 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks('grunt-webpack');
 	grunt.loadNpmTasks('grunt-mocha-test');
 
-	grunt.registerTask( 'default', [ 'styles', 'scripts' ] );
+	grunt.registerTask( 'default', [ 'styles' ] );
 	grunt.registerTask( 'styles', [ 'sass', 'postcss' ] );
 	grunt.registerTask( 'scripts', [ 'webpack', 'mochaTest' ] );
 	grunt.registerTask( 'test', [ 'mochaTest' ] );
