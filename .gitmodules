@@ -3,4 +3,4 @@
 	url = https://github.com/WP-API/WP-API.git
 [submodule "lib/msm-sitemap"]
 	path = lib/msm-sitemap
-	url = git@github.com:Automattic/msm-sitemap.git
+	url = https://github.com/Automattic/msm-sitemap.git
