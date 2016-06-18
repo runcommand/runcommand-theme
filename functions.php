@@ -81,6 +81,7 @@ class runcommand {
 		$controllers = array(
 			'\runcommand\Assets',
 			'\runcommand\Content_Model',
+			'\runcommand\Query',
 			'\runcommand\REST\API',
 		);
 		foreach( $controllers as $controller ) {
