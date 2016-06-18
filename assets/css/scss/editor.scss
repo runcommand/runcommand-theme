@@ -1,0 +1,15 @@
+@import './../../lib/foundation/scss/normalize';
+
+@import 'base/foundation-settings';
+@import 'base/foundation';
+@import 'base/typography';
+
+body.mce-content-body {
+	margin-top: .75rem;
+	margin-bottom: .75rem;
+	padding-left: 1.5rem !important;
+	padding-right: 1.5rem !important;
+	max-width: 830px;
+	background-color: #000;
+	color: #FFF;
+}

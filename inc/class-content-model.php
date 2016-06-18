@@ -15,6 +15,11 @@ class Content_Model extends Controller {
 	protected function setup_filters() {
 		// App handles all body classes
 		add_filter( 'body_class', '__return_empty_array');
+
+		add_filter( 'msm_sitemap_entry_post_type', function() {
+			return array( 'post', 'page', 'command' );
+		});
+
 	}
 
 	public function action_init_register_post_types() {
@@ -33,6 +38,8 @@ class Content_Model extends Controller {
 				'rest_controller_class'   => '\runcommand\REST\Base_Posts_Controller',
 				'supports'                => array(
 					'title',
+					'excerpt',
+					'editor',
 				)
 			);
 			switch ( $post_type ) {
@@ -42,6 +49,7 @@ class Content_Model extends Controller {
 					$args['has_archive'] = 'commands';
 					$args['rest_base'] = 'commands';
 					$args['rest_controller_class'] = '\runcommand\REST\Commands_Controller';
+					$args['rewrite']['slug'] = 'wp';
 					break;
 			}
 			$args['labels'] = array(

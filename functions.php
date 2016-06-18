@@ -31,6 +31,14 @@ class runcommand {
 	}
 
 	private function setup_filters() {
+
+		/**
+		 * Set default configuration variables
+		 */
+		add_filter( 'pre_option_blogdescription', function(){
+			return 'The fastest way to do anything with WordPress.';
+		});
+
 		/**
 		 * Ensure plugin assets loaded from within the theme are served at a corrected URL
 		 */
@@ -49,6 +57,7 @@ class runcommand {
 	private function require_files() {
 
 		require_once __DIR__ . '/lib/rest-api/plugin.php';
+		require_once __DIR__ . '/lib/msm-sitemap/msm-sitemap.php';
 
 		spl_autoload_register( function( $class ) {
 			$class = ltrim( $class, '\\' );
@@ -72,6 +81,7 @@ class runcommand {
 		$controllers = array(
 			'\runcommand\Assets',
 			'\runcommand\Content_Model',
+			'\runcommand\Query',
 			'\runcommand\REST\API',
 		);
 		foreach( $controllers as $controller ) {
@@ -80,7 +90,8 @@ class runcommand {
 	}
 
 	public function action_after_setup_theme() {
-		
+
+		add_theme_support( 'title-tag' );
 	}
 
 	/**

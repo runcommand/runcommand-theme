@@ -14,7 +14,7 @@
 						</header>
 
 						<div class="page-content">
-							<?php the_excerpt(); ?>
+							<?php the_content(); ?>
 						</div>
 
 				<?php endwhile; ?>
