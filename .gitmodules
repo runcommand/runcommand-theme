@@ -1,3 +1,6 @@
 [submodule "lib/rest-api"]
 	path = lib/rest-api
 	url = https://github.com/WP-API/WP-API.git
+[submodule "lib/msm-sitemap"]
+	path = lib/msm-sitemap
+	url = git@github.com:Automattic/msm-sitemap.git
