@@ -23,6 +23,7 @@
 							<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> - <?php echo get_the_excerpt(); ?></li>
 						<?php endwhile; ?>
 						</ul>
+						<p>Or, <a href="<?php echo esc_url( home_url( 'commands/' ) ); ?>">view all commands</a>.</p>
 					<?php endif; ?>
 				</div>
 
