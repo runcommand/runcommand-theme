@@ -9,7 +9,8 @@
 
 	<?php wp_footer(); ?>
 
-	<?php if ( 'runcommand.io' === parse_url( home_url(), PHP_URL_HOST ) ) : ?>
+	<?php if ( 'runcommand.io' === parse_url( home_url(), PHP_URL_HOST )
+		&& ! current_user_can( 'manage_options' ) ) : ?>
 		<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
