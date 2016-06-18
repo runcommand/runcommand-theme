@@ -80,7 +80,8 @@ class runcommand {
 	}
 
 	public function action_after_setup_theme() {
-		
+
+		add_theme_support( 'title-tag' );
 	}
 
 	/**

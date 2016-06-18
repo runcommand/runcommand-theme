@@ -23,8 +23,8 @@ class Assets extends Controller {
 		$time = filemtime( get_template_directory() . '/assets/css/style.css' );
 		wp_enqueue_style( 'runcommand', get_template_directory_uri() . '/assets/css/style.css?r=' . (int) $time, array( 'source-code-pro' ) );
 
-		$time = filemtime( get_template_directory() . '/assets/dist/app.js' );
-		wp_enqueue_script( 'runcommand', get_template_directory_uri() . '/assets/dist/app.js?r=' . (int) $time, null, false, true );
+		// $time = filemtime( get_template_directory() . '/assets/dist/app.js' );
+		// wp_enqueue_script( 'runcommand', get_template_directory_uri() . '/assets/dist/app.js?r=' . (int) $time, null, false, true );
 	}
 
 }

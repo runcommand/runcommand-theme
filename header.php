@@ -11,3 +11,11 @@
 
 <body <?php body_class(); ?>>
 
+	<header class="site-header">
+		<div class="row">
+			<div class="columns">
+				<a class="site-title" href="<?php echo home_url( '/' ); ?>">runcommand</a> - <span class="site-description">The fastest way to do anything with WordPress</span>
+			</div>
+		</div>
+	</header>
+
