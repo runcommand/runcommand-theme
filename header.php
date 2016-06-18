@@ -14,7 +14,8 @@
 	<header class="site-header">
 		<div class="row">
 			<div class="columns">
-				<a class="site-title" href="<?php echo home_url( '/' ); ?>">runcommand</a> - <span class="site-description"><?php bloginfo( 'description' ); ?></span>
+				<a class="site-title" href="<?php echo home_url( '/' ); ?>">runcommand</a>
+				<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 			</div>
 		</div>
 		<div class="row">
