@@ -2204,8 +2204,8 @@ small {
   line-height: inherit; }
 
 code {
-  background-color: #cffeff;
-  border-color: #a1feff;
+  background-color: #e0e0e0;
+  border-color: #cacaca;
   border-style: solid;
   border-width: 1px;
   color: #333333;
@@ -3859,12 +3859,21 @@ table {
     display: table-cell;
     line-height: 1.125rem; }
 
+pre code {
+  display: block; }
+
 header.site-header {
   padding-top: 2rem;
   padding-bottom: 2rem; }
   header.site-header .header-nav {
     margin-top: 0.5rem;
     margin-bottom: 0; }
+
+header.page-header h2 {
+  margin-bottom: 1rem; }
+
+.page-content h3 {
+  margin-bottom: 0.7rem; }
 
 footer.site-footer {
   padding-top: 2rem;

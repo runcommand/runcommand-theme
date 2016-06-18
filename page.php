@@ -18,13 +18,13 @@
 						</div>
 
 				<?php endwhile; ?>
-				
+
 				</div>
 
 			</div>
 
 		<?php endif; ?>
-		
+
 	</div>
 
 <?php get_footer(); ?>

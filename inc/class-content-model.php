@@ -38,6 +38,8 @@ class Content_Model extends Controller {
 				'rest_controller_class'   => '\runcommand\REST\Base_Posts_Controller',
 				'supports'                => array(
 					'title',
+					'excerpt',
+					'editor',
 				)
 			);
 			switch ( $post_type ) {
@@ -47,6 +49,7 @@ class Content_Model extends Controller {
 					$args['has_archive'] = 'commands';
 					$args['rest_base'] = 'commands';
 					$args['rest_controller_class'] = '\runcommand\REST\Commands_Controller';
+					$args['rewrite']['slug'] = 'wp';
 					break;
 			}
 			$args['labels'] = array(

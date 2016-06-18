@@ -1,4 +1,12 @@
 
+	<footer class="site-footer">
+		<div class="row">
+			<div class="columns">
+				<a href="<?php echo home_url( '/' ); ?>">runcommand</a> - Premium WP-CLI services for WordPress-based businesses, brought to you by Daniel Bachhuber, the maintainer of WP-CLI.
+			</div>
+		</div>
+	</footer>
+
 	<?php wp_footer(); ?>
 
 	<?php if ( 'runcommand.io' === parse_url( home_url(), PHP_URL_HOST ) ) : ?>

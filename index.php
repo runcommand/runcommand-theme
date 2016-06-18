@@ -1,18 +1,30 @@
 <?php get_header(); ?>
 
-	<script>
-		window.runcommandInitialState = <?php echo json_encode( runcommand\REST\API::get_initial_state() ); ?>;
-		window.runcommandGoogleAnalytics = <?php echo json_encode( 'runcommand.io' === parse_url( home_url(), PHP_URL_HOST ) ? 'UA-75452026-1' : 'UA-00000000-0' ); ?>;
-	</script>
+	<div class="site-content">
 
-	<div id="app">
-		<header class="site-header">
+		<?php if ( have_posts() ) : ?>
+
 			<div class="row">
 				<div class="columns">
-					<a class="site-title" href="<?php echo home_url( '/' ); ?>">runcommand</a> - <span class="site-description">The fastest way to do anything with WordPress</span>
+
+				<?php while( have_posts() ) : the_post(); ?>
+
+						<header class="page-header">
+							<h2><?php the_title(); ?></h2>
+						</header>
+
+						<div class="page-content">
+							<?php the_excerpt(); ?>
+						</div>
+
+				<?php endwhile; ?>
+
 				</div>
+
 			</div>
-		</header>
+
+		<?php endif; ?>
+
 	</div>
 
 <?php get_footer(); ?>

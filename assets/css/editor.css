@@ -2559,8 +2559,8 @@ small {
   line-height: inherit; }
 
 code {
-  background-color: #cffeff;
-  border-color: #a1feff;
+  background-color: #e0e0e0;
+  border-color: #cacaca;
   border-style: solid;
   border-width: 1px;
   color: #333333;
@@ -4213,6 +4213,9 @@ table {
   table tr td {
     display: table-cell;
     line-height: 1.125rem; }
+
+pre code {
+  display: block; }
 
 body.mce-content-body {
   margin-top: .75rem;
