@@ -31,6 +31,14 @@ class runcommand {
 	}
 
 	private function setup_filters() {
+
+		/**
+		 * Set default configuration variables
+		 */
+		add_filter( 'pre_option_blogdescription', function(){
+			return 'The fastest way to do anything with WordPress.';
+		});
+
 		/**
 		 * Ensure plugin assets loaded from within the theme are served at a corrected URL
 		 */
