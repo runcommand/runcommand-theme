@@ -17,6 +17,7 @@ module.exports = function( grunt ) {
 				files: {
 					'assets/css/style.css' : 'assets/css/scss/style.scss',
 					'assets/css/admin.css' : 'assets/css/scss/admin.scss',
+					'assets/css/editor.css' : 'assets/css/scss/editor.scss',
 				}
 			}
 		},
