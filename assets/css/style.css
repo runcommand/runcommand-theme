@@ -3862,6 +3862,9 @@ table {
 header.site-header {
   padding-top: 2rem;
   padding-bottom: 2rem; }
+  header.site-header .header-nav {
+    margin-top: 0.5rem;
+    margin-bottom: 0; }
 
 footer.site-footer {
   padding-top: 2rem;
