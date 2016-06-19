@@ -1,8 +1,56 @@
 
 	<footer class="site-footer">
 		<div class="row">
-			<div class="columns">
-				<a href="<?php echo home_url( '/' ); ?>">runcommand</a> - Premium WP-CLI services for WordPress-based businesses, brought to you by Daniel Bachhuber, the maintainer of WP-CLI.
+			<div class="columns medium-3">
+				<ul class="footer-list">
+					<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">runcommand</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="<?php echo esc_url( home_url( 'for-hosts/' ) ); ?>">For Hosts</a></li>
+					<li><a href="<?php echo esc_url( home_url( 'for-agencies/' ) ); ?>">For Agencies</a></li>
+					<li><a href="#">Pricing</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+			<div class="columns medium-3">
+				<ul class="footer-list">
+					<li><a href="<?php echo esc_url( home_url( 'commands/' ) ); ?>">Commands</a></li>
+				<?php
+					$command_query = new WP_Query( array(
+						'post_type'      => 'command',
+						'posts_per_page' => 5,
+						'post_status'    => 'publish',
+						'orderby'        => 'modified',
+					)); ?>
+				<?php if ( $command_query->have_posts() ) : ?>
+					<?php while( $command_query->have_posts() ) : $command_query->the_post(); ?>
+						<li><a title="<?php echo esc_attr( get_the_excerpt() ); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+					<?php endwhile; ?>
+				<?php endif; ?>
+				</ul>
+			</div>
+			<div class="columns medium-3 end">
+				<ul class="footer-list">
+					<li><a href="<?php echo esc_url( home_url( 'excerpts/' ) ); ?>">Excerpts</a></li>
+					<?php
+						$excerpt_query = new WP_Query( array(
+							'post_type'      => 'excerpt',
+							'posts_per_page' => 5,
+							'post_status'    => 'publish',
+							'orderby'        => 'modified',
+						)); ?>
+					<?php if ( $excerpt_query->have_posts() ) : ?>
+						<?php while( $excerpt_query->have_posts() ) : $excerpt_query->the_post(); ?>
+							<li><a title="<?php echo esc_attr( get_the_excerpt() ); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+						<?php endwhile; ?>
+					<?php endif; ?>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="columns text-center">
+				<div class="made-by">
+					<small>Made in <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/oregon.svg' ); ?>" /> by runcommand, LLC.</small>
+				</div>
 			</div>
 		</div>
 	</footer>

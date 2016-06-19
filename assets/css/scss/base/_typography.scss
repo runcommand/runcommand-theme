@@ -6,4 +6,17 @@ pre {
 
 pre code {
 	display: block;
+	white-space: pre;
+}
+
+code {
+	white-space:nowrap;
+}
+
+.promo {
+	font-size: 1.5rem;
+	@media #{$medium-up} {
+		font-size: 2rem;
+	}
+	margin-bottom: 2rem;
 }

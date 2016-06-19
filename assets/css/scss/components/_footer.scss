@@ -1,4 +1,25 @@
 footer.site-footer {
 	padding-top: 2rem;
 	padding-bottom: 2rem;
+
+	.footer-list {
+		list-style-type: none;
+		li:first-child {
+			border-bottom: 1px solid $light-grey-color;
+			margin-bottom: 0.5rem;
+			padding-bottom: 0.5rem;
+			text-transform: lowercase;
+			a {
+				color: $dark-grey-color;
+			}
+		}
+	}
+	.made-by {
+		color: $dark-grey-color;
+		img {
+			height: .6rem;
+			vertical-align: middle;
+			margin-top: -0.2rem;
+		}
+	}
 }

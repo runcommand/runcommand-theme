@@ -1,0 +1,11 @@
+@media #{$medium-up} {
+	.break-medium-up {
+		display: block;
+		margin-bottom: 2rem;
+	}
+}
+
+a.inverse {
+	background-color: $primary-color;
+	color: $white;
+}
