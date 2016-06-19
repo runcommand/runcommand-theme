@@ -12,6 +12,7 @@ class Content_Model extends Controller {
 
 	protected function setup_actions() {
 		add_action( 'init', array( $this, 'action_init_register_post_types' ) );
+		add_action( 'init', array( $this, 'action_init_register_shortcodes' ) );
 		add_action( 'template_redirect', function() {
 			global $wp;
 
@@ -84,6 +85,12 @@ class Content_Model extends Controller {
 			);
 			register_post_type( $post_type, $args );
 		}
+	}
+
+	public function action_init_register_shortcodes() {
+		add_shortcode( 'pricing-grid', function() {
+			return \runcommand::get_template_part( 'pricing-grid' );
+		});
 	}
 
 	public function filter_post_type_link( $post_link, $post, $leavename, $sample ) {
