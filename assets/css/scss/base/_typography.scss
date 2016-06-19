@@ -7,3 +7,11 @@ pre {
 pre code {
 	display: block;
 }
+
+.promo {
+	font-size: 1.5rem;
+	@media #{$medium-up} {
+		font-size: 2rem;
+	}
+	margin-bottom: 2rem;
+}
