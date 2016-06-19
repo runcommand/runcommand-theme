@@ -2,20 +2,18 @@ footer.site-footer {
 	padding-top: 2rem;
 	padding-bottom: 2rem;
 
+	h4 {
+		border-bottom: 1px solid $light-grey-color;
+		margin-bottom: 0.5rem;
+		padding-bottom: 0.5rem;
+		text-transform: lowercase;
+		a {
+			color: $dark-grey-color;
+		}
+	}
+
 	.footer-list {
-		list-style-type: none;
-		li:first-child {
-			border-bottom: 1px solid $light-grey-color;
-			margin-bottom: 0.5rem;
-			padding-bottom: 0.5rem;
-			text-transform: lowercase;
-			a {
-				color: $dark-grey-color;
-			}
-		}
-		@media #{$small-only} {
-			margin-left: 0;
-		}
+		color: $dark-grey-color;
 	}
 	.made-by {
 		color: $dark-grey-color;

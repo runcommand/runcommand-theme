@@ -1,9 +1,39 @@
 
 	<footer class="site-footer">
 		<div class="row">
+			<div class="columns">
+				<!-- Begin MailChimp Signup Form -->
+				<div id="mc_embed_signup">
+				<form action="//runcommand.us13.list-manage.com/subscribe/post?u=65c9e1ec3c097ee95eb468c9f&amp;id=5b6f61b116" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+				    <div id="mc_embed_signup_scroll">
+				<div class="mc-field-group">
+					<div class="row collapse">
+						<div class="columns small-3">
+							<label for="mce-EMAIL" class="prefix">Sign up for updates</label>
+						</div>
+						<div class="columns small-7">
+							<input type="email" placeholder="Email address" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+						</div>
+						<div class="columns small-2">
+							<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button postfix">
+						</div>
+					</div>
+				</div>
+					<div id="mce-responses" class="clear">
+						<div class="response" id="mce-error-response" style="display:none"></div>
+						<div class="response" id="mce-success-response" style="display:none"></div>
+					</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+				    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_65c9e1ec3c097ee95eb468c9f_5b6f61b116" tabindex="-1" value=""></div>
+				    </div>
+				</form>
+				</div>
+				<!--End mc_embed_signup-->
+			</div>
+		</div>
+		<div class="row">
 			<div class="columns medium-3">
+				<h4><a href="<?php echo esc_url( home_url( '/' ) ); ?>">runcommand</a></h4>
 				<ul class="footer-list">
-					<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">runcommand</a></li>
 					<li><a href="#">About</a></li>
 					<li><a href="<?php echo esc_url( home_url( 'for-hosts/' ) ); ?>">For Hosts</a></li>
 					<li><a href="<?php echo esc_url( home_url( 'for-agencies/' ) ); ?>">For Agencies</a></li>
@@ -12,7 +42,6 @@
 				</ul>
 			</div>
 			<div class="columns medium-3">
-				<ul class="footer-list">
 				<?php
 					$command_query = new WP_Query( array(
 						'post_type'      => 'command',
@@ -20,7 +49,8 @@
 						'post_status'    => 'publish',
 						'orderby'        => 'modified',
 					)); ?>
-					<li><a href="<?php echo esc_url( home_url( 'commands/' ) ); ?>">Commands <small>(<?php echo (int) $command_query->found_posts; ?>)</small></a></li>
+				<h4><a href="<?php echo esc_url( home_url( 'commands/' ) ); ?>">Commands <small>(<?php echo (int) $command_query->found_posts; ?>)</small></a></h4>
+				<ul class="footer-list">
 				<?php if ( $command_query->have_posts() ) : ?>
 					<?php while( $command_query->have_posts() ) : $command_query->the_post(); ?>
 						<li><a title="<?php echo esc_attr( get_the_excerpt() ); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
@@ -29,15 +59,15 @@
 				</ul>
 			</div>
 			<div class="columns medium-3 end">
+				<?php
+				$excerpt_query = new WP_Query( array(
+					'post_type'      => 'excerpt',
+					'posts_per_page' => 5,
+					'post_status'    => 'publish',
+					'orderby'        => 'modified',
+				)); ?>
+				<h4><a href="<?php echo esc_url( home_url( 'excerpts/' ) ); ?>">Excerpts <small>(<?php echo (int) $excerpt_query->found_posts; ?>)</small></a></h4>
 				<ul class="footer-list">
-					<?php
-						$excerpt_query = new WP_Query( array(
-							'post_type'      => 'excerpt',
-							'posts_per_page' => 5,
-							'post_status'    => 'publish',
-							'orderby'        => 'modified',
-						)); ?>
-					<li><a href="<?php echo esc_url( home_url( 'excerpts/' ) ); ?>">Excerpts <small>(<?php echo (int) $excerpt_query->found_posts; ?>)</small></a></li>
 					<?php if ( $excerpt_query->have_posts() ) : ?>
 						<?php while( $excerpt_query->have_posts() ) : $excerpt_query->the_post(); ?>
 							<li><a title="<?php echo esc_attr( get_the_excerpt() ); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
