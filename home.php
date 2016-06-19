@@ -12,7 +12,7 @@
 					</div>
 
 					<div class="promo">
-						Learn more: runcommand for <a href="<?php echo home_url( 'for-hosts/' ); ?>">managed WordPress hosts</a> and <a href="<?php echo home_url( 'for-agencies/' ); ?>">WordPress agencies</a>
+						Learn more: runcommand for <a href="<?php echo home_url( 'for-hosts/' ); ?>">managed WordPress hosts</a> and <a href="<?php echo home_url( 'for-agencies/' ); ?>">WordPress agencies</a>.
 					</div>
 				</div>
 
