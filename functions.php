@@ -82,6 +82,7 @@ class runcommand {
 		$controllers = array(
 			'\runcommand\Assets',
 			'\runcommand\Content_Model',
+			'\runcommand\Distribution_Metadata',
 			'\runcommand\Query',
 			'\runcommand\REST\API',
 		);
