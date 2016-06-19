@@ -56,6 +56,7 @@ class runcommand {
 
 	private function require_files() {
 
+		require_once __DIR__ . '/vendor/autoload.php';
 		require_once __DIR__ . '/lib/rest-api/plugin.php';
 		require_once __DIR__ . '/lib/msm-sitemap/msm-sitemap.php';
 

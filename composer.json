@@ -1,0 +1,12 @@
+{
+    "name": "runcommand/runcommand-theme",
+    "require": {
+        "league/commonmark": "^0.13.4"
+    },
+    "authors": [
+        {
+            "name": "Daniel Bachhuber",
+            "email": "daniel@runcommand.io"
+        }
+    ]
+}

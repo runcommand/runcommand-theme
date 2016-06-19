@@ -2,6 +2,8 @@
 
 namespace runcommand;
 
+use League\CommonMark\CommonMarkConverter;
+
 class Content_Model extends Controller {
 
 	protected static $content_post_types = array(
@@ -19,6 +21,11 @@ class Content_Model extends Controller {
 		add_filter( 'msm_sitemap_entry_post_type', function() {
 			return array( 'post', 'page', 'command' );
 		});
+
+		add_filter( 'the_content', function( $content ) {
+			$converter = new CommonMarkConverter;
+			return $converter->convertToHtml( $content );
+		}, 0 );
 
 	}
 
