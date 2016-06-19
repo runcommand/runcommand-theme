@@ -4220,7 +4220,11 @@ pre {
   padding-bottom: 0.5rem; }
 
 pre code {
-  display: block; }
+  display: block;
+  white-space: pre; }
+
+code {
+  white-space: nowrap; }
 
 .promo {
   font-size: 1.5rem;

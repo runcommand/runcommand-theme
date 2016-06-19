@@ -6,6 +6,11 @@ pre {
 
 pre code {
 	display: block;
+	white-space: pre;
+}
+
+code {
+	white-space:nowrap;
 }
 
 .promo {
