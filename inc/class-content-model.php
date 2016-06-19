@@ -29,8 +29,6 @@ class Content_Model extends Controller {
 	}
 
 	protected function setup_filters() {
-		// App handles all body classes
-		add_filter( 'body_class', '__return_empty_array');
 
 		add_filter( 'msm_sitemap_entry_post_type', function() {
 			return array( 'post', 'page', 'command' );
