@@ -14,7 +14,7 @@
 	<header class="site-header">
 		<div class="row">
 			<div class="columns">
-				<a class="site-title" href="<?php echo home_url( '/' ); ?>">runcommand</a>
+				<a class="site-title" href="<?php echo home_url( '/' ); ?>"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/running-man.svg' ); ?>">runcommand</a>
 				<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 			</div>
 		</div>
