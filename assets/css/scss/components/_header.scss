@@ -16,4 +16,14 @@ header.site-header {
 			margin-top: -0.4rem;
 		}
 	}
+
+	.social {
+		margin-left: 0.5rem;
+		a {
+			color: $medium-grey-color;
+			&:hover {
+				color: inherit;
+			}
+		}
+	}
 }

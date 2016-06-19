@@ -14,7 +14,7 @@
 	<header class="site-header">
 		<div class="row">
 			<div class="columns medium-5 large-6">
-				<a class="site-title" href="<?php echo home_url( '/' ); ?>"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/running-man.svg' ); ?>">runcommand</a>
+				<a class="site-title" href="<?php echo home_url( '/' ); ?>"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/running-man.svg' ); ?>">runcommand</a> <span class="social"><a href="https://github.com/runcommand"><i class="fa fa-github"></i></a> <a href="https://twitter.com/runcommand"><i class="fa fa-twitter"></i></a></span>
 				<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 			</div>
 			<div class="columns medium-6 medium-offset-1 large-5">
