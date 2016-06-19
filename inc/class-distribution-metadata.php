@@ -14,6 +14,11 @@ class Distribution_Metadata extends Controller {
 
 	public function filter_document_title_parts( $title ) {
 
+		if ( is_home() ) {
+			$title['tagline'] = 'Premium WP-CLI commands and support';
+			$title = array_reverse( $title );
+		}
+
 		if ( is_singular() && 'command' === get_post_type() ) {
 			$title['title'] = 'wp ' . $title['title'];
 		}
