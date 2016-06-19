@@ -14,6 +14,11 @@ class Query extends Controller {
 			$query->set( 'posts_per_page', 50 );
 		}
 
+		if ( 'command' === $query->get( 'post_type' ) && ! $query->get( 'orderby' ) && ! $query->get( 'order' ) ) {
+			$query->set( 'orderby', 'title' );
+			$query->set( 'order', 'ASC' );
+		}
+
 	}
 
 }
