@@ -49,7 +49,7 @@
 		<div class="row">
 			<div class="columns text-center">
 				<div class="made-by">
-					<small>Made in <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/oregon.svg' ); ?>" /> by runcommand, LLC.</small>
+					<small>Made in <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/oregon.svg' ); ?>" /> by runcommand, LLC. &bull; <a href="https://github.com/runcommand"><i class="fa fa-github"></i> Github</a> &bull; <a href="https://twitter.com/runcommand"><i class="fa fa-twitter"></i> Twitter</a></small>
 				</div>
 			</div>
 		</div>

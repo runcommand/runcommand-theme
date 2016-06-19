@@ -13,6 +13,9 @@ footer.site-footer {
 				color: $dark-grey-color;
 			}
 		}
+		@media #{$small-only} {
+			margin-left: 0;
+		}
 	}
 	.made-by {
 		color: $dark-grey-color;
@@ -20,6 +23,13 @@ footer.site-footer {
 			height: .6rem;
 			vertical-align: middle;
 			margin-top: -0.2rem;
+		}
+		a {
+			color: inherit;
+			&:hover {
+				color: inherit;
+				text-decoration: underline;
+			}
 		}
 	}
 }
