@@ -21,7 +21,7 @@
 				<ul class="inline-list header-nav">
 					<li><a href="<?php echo esc_url( home_url( 'for-hosts/' ) ); ?>">For Hosts</a></li>
 					<li><a href="<?php echo esc_url( home_url( 'for-agencies/' ) ); ?>">For Agencies</a></li>
-					<li><a href="#">Pricing</a></li>
+					<li><a href="<?php echo esc_url( home_url( 'pricing/' ) ); ?>">Pricing</a></li>
 				</ul>
 			</div>
 		</div>

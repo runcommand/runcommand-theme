@@ -4171,6 +4171,52 @@ ul.pagination {
     .progress.round .meter {
       border-radius: 999px; }
 
+/* Pricing Tables */
+.pricing-table {
+  border: solid 1px #DDDDDD;
+  margin-left: 0;
+  margin-bottom: 1.25rem; }
+  .pricing-table * {
+    list-style: none;
+    line-height: 1; }
+  .pricing-table .title {
+    background-color: #333333;
+    color: #EEEEEE;
+    font-family: "Avenir", "Avenir Next", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    padding: 0.9375rem 1.25rem;
+    text-align: center; }
+  .pricing-table .price {
+    background-color: #F6F6F6;
+    color: #333333;
+    font-family: "Avenir", "Avenir Next", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: normal;
+    padding: 0.9375rem 1.25rem;
+    text-align: center; }
+  .pricing-table .description {
+    background-color: #FFFFFF;
+    border-bottom: dotted 1px #DDDDDD;
+    color: #777777;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1.4;
+    padding: 0.9375rem;
+    text-align: center; }
+  .pricing-table .bullet-item {
+    background-color: #FFFFFF;
+    border-bottom: dotted 1px #DDDDDD;
+    color: #333333;
+    font-size: 0.875rem;
+    font-weight: normal;
+    padding: 0.9375rem;
+    text-align: center; }
+  .pricing-table .cta-button {
+    background-color: #FFFFFF;
+    padding: 1.25rem 1.25rem 0;
+    text-align: center; }
+
 table {
   background: #FFFFFF;
   border: solid 1px #DDDDDD;
