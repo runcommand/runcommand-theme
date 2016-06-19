@@ -13,7 +13,6 @@
 			</div>
 			<div class="columns medium-3">
 				<ul class="footer-list">
-					<li><a href="<?php echo esc_url( home_url( 'commands/' ) ); ?>">Commands</a></li>
 				<?php
 					$command_query = new WP_Query( array(
 						'post_type'      => 'command',
@@ -21,6 +20,7 @@
 						'post_status'    => 'publish',
 						'orderby'        => 'modified',
 					)); ?>
+					<li><a href="<?php echo esc_url( home_url( 'commands/' ) ); ?>">Commands <small>(<?php echo (int) $command_query->found_posts; ?>)</small></a></li>
 				<?php if ( $command_query->have_posts() ) : ?>
 					<?php while( $command_query->have_posts() ) : $command_query->the_post(); ?>
 						<li><a title="<?php echo esc_attr( get_the_excerpt() ); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
@@ -30,7 +30,6 @@
 			</div>
 			<div class="columns medium-3 end">
 				<ul class="footer-list">
-					<li><a href="<?php echo esc_url( home_url( 'excerpts/' ) ); ?>">Excerpts</a></li>
 					<?php
 						$excerpt_query = new WP_Query( array(
 							'post_type'      => 'excerpt',
@@ -38,6 +37,7 @@
 							'post_status'    => 'publish',
 							'orderby'        => 'modified',
 						)); ?>
+					<li><a href="<?php echo esc_url( home_url( 'excerpts/' ) ); ?>">Excerpts <small>(<?php echo (int) $excerpt_query->found_posts; ?>)</small></a></li>
 					<?php if ( $excerpt_query->have_posts() ) : ?>
 						<?php while( $excerpt_query->have_posts() ) : $excerpt_query->the_post(); ?>
 							<li><a title="<?php echo esc_attr( get_the_excerpt() ); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
