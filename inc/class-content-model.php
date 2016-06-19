@@ -12,6 +12,14 @@ class Content_Model extends Controller {
 
 	protected function setup_actions() {
 		add_action( 'init', array( $this, 'action_init_register_post_types' ) );
+		add_action( 'template_redirect', function() {
+			global $wp;
+
+			if ( 'wp' === $wp->request ) {
+				wp_safe_redirect( home_url( 'commands/' ) );
+				exit;
+			}
+		});
 	}
 
 	protected function setup_filters() {
