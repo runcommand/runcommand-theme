@@ -6154,18 +6154,15 @@ body.home .page-content {
 footer.site-footer {
   padding-top: 2rem;
   padding-bottom: 2rem; }
+  footer.site-footer h4 {
+    border-bottom: 1px solid #CACACA;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    text-transform: lowercase; }
+    footer.site-footer h4 a {
+      color: #888888; }
   footer.site-footer .footer-list {
-    list-style-type: none; }
-    footer.site-footer .footer-list li:first-child {
-      border-bottom: 1px solid #CACACA;
-      margin-bottom: 0.5rem;
-      padding-bottom: 0.5rem;
-      text-transform: lowercase; }
-      footer.site-footer .footer-list li:first-child a {
-        color: #888888; }
-    @media only screen and (max-width: 40em) {
-      footer.site-footer .footer-list {
-        margin-left: 0; } }
+    color: #888888; }
   footer.site-footer .made-by {
     color: #888888; }
     footer.site-footer .made-by img {

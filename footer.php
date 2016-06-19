@@ -2,8 +2,8 @@
 	<footer class="site-footer">
 		<div class="row">
 			<div class="columns medium-3">
+				<h4><a href="<?php echo esc_url( home_url( '/' ) ); ?>">runcommand</a></h4>
 				<ul class="footer-list">
-					<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">runcommand</a></li>
 					<li><a href="#">About</a></li>
 					<li><a href="<?php echo esc_url( home_url( 'for-hosts/' ) ); ?>">For Hosts</a></li>
 					<li><a href="<?php echo esc_url( home_url( 'for-agencies/' ) ); ?>">For Agencies</a></li>
@@ -12,7 +12,6 @@
 				</ul>
 			</div>
 			<div class="columns medium-3">
-				<ul class="footer-list">
 				<?php
 					$command_query = new WP_Query( array(
 						'post_type'      => 'command',
@@ -20,7 +19,8 @@
 						'post_status'    => 'publish',
 						'orderby'        => 'modified',
 					)); ?>
-					<li><a href="<?php echo esc_url( home_url( 'commands/' ) ); ?>">Commands <small>(<?php echo (int) $command_query->found_posts; ?>)</small></a></li>
+				<h4><a href="<?php echo esc_url( home_url( 'commands/' ) ); ?>">Commands <small>(<?php echo (int) $command_query->found_posts; ?>)</small></a></h4>
+				<ul class="footer-list">
 				<?php if ( $command_query->have_posts() ) : ?>
 					<?php while( $command_query->have_posts() ) : $command_query->the_post(); ?>
 						<li><a title="<?php echo esc_attr( get_the_excerpt() ); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
@@ -29,15 +29,15 @@
 				</ul>
 			</div>
 			<div class="columns medium-3 end">
+				<?php
+				$excerpt_query = new WP_Query( array(
+					'post_type'      => 'excerpt',
+					'posts_per_page' => 5,
+					'post_status'    => 'publish',
+					'orderby'        => 'modified',
+				)); ?>
+				<h4><a href="<?php echo esc_url( home_url( 'excerpts/' ) ); ?>">Excerpts <small>(<?php echo (int) $excerpt_query->found_posts; ?>)</small></a></h4>
 				<ul class="footer-list">
-					<?php
-						$excerpt_query = new WP_Query( array(
-							'post_type'      => 'excerpt',
-							'posts_per_page' => 5,
-							'post_status'    => 'publish',
-							'orderby'        => 'modified',
-						)); ?>
-					<li><a href="<?php echo esc_url( home_url( 'excerpts/' ) ); ?>">Excerpts <small>(<?php echo (int) $excerpt_query->found_posts; ?>)</small></a></li>
 					<?php if ( $excerpt_query->have_posts() ) : ?>
 						<?php while( $excerpt_query->have_posts() ) : $excerpt_query->the_post(); ?>
 							<li><a title="<?php echo esc_attr( get_the_excerpt() ); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
