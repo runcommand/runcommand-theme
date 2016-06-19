@@ -3874,10 +3874,11 @@ header.site-header {
     margin-top: 0.5rem;
     margin-bottom: 0; }
   header.site-header .site-title {
-    font-size: 1.25rem; }
-    @media only screen and (min-width: 40.0625em) {
-      header.site-header .site-title {
-        font-size: 1.75rem; } }
+    font-size: 1.75rem; }
+    header.site-header .site-title img {
+      height: 2rem;
+      margin-right: .25rem;
+      margin-top: -0.4rem; }
 
 header.page-header h2 {
   margin-bottom: 1rem; }

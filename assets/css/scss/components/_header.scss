@@ -8,9 +8,12 @@ header.site-header {
 	}
 	
 	.site-title {
-		font-size: 1.25rem;
-		@media #{$medium-up} {
-			font-size: 1.75rem;
+		font-size: 1.75rem;
+
+		img {
+			height: 2rem;
+			margin-right: .25rem;
+			margin-top: -0.4rem;
 		}
 	}
 }
