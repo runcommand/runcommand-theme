@@ -62,7 +62,7 @@
 				<?php
 				$excerpt_query = new WP_Query( array(
 					'post_type'      => 'excerpt',
-					'posts_per_page' => 5,
+					'posts_per_page' => 3,
 					'post_status'    => 'publish',
 					'orderby'        => 'modified',
 				)); ?>
