@@ -8,13 +8,13 @@
 				    <div id="mc_embed_signup_scroll">
 				<div class="mc-field-group">
 					<div class="row collapse">
-						<div class="columns small-3">
+						<div class="columns small-5 medium-3">
 							<label for="mce-EMAIL" class="prefix">Sign up for updates</label>
 						</div>
-						<div class="columns small-7">
+						<div class="columns small-7 medium-7">
 							<input type="email" placeholder="Email address" value="" name="EMAIL" class="required email" id="mce-EMAIL">
 						</div>
-						<div class="columns small-2">
+						<div class="columns small-12 medium-2">
 							<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button postfix">
 						</div>
 					</div>
