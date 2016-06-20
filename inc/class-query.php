@@ -10,7 +10,7 @@ class Query extends Controller {
 
 	public function action_pre_get_posts( $query ) {
 
-		if ( ! is_admin() && $query->is_archive() && 'command' === $query->get( 'post_type' ) ) {
+		if ( ! is_admin() && $query->is_main_query() && $query->is_archive() && 'command' === $query->get( 'post_type' ) ) {
 			$query->set( 'posts_per_page', 50 );
 		}
 
