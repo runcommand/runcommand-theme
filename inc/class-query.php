@@ -21,4 +21,27 @@ class Query extends Controller {
 
 	}
 
+	/**
+	 * Get a post object based on its ID
+	 *
+	 * @param int
+	 * @return obj|false
+	 */
+	public static function get_post_by_id( $post_id ) {
+		if ( ! $post_id ) {
+			return false;
+		}
+
+		$post = get_post( $post_id );
+		if ( ! $post ) {
+			return false;
+		}
+
+		$class = '\runcommand\Objects\\' . ucwords( $post->post_type );
+		if ( ! class_exists( $class ) ) {
+			return false;
+		}
+		return new $class( $post );
+	}
+
 }

@@ -17,7 +17,7 @@ class runcommand {
 	}
 
 	private function setup_constants() {
-		
+		define( 'RUNCOMMAND_TWITTER_SHARE_TEXT_MAX_LENGTH', 100 );
 	}
 
 	private function setup_actions() {
@@ -59,6 +59,7 @@ class runcommand {
 		require_once __DIR__ . '/vendor/autoload.php';
 		require_once __DIR__ . '/lib/rest-api/plugin.php';
 		require_once __DIR__ . '/lib/msm-sitemap/msm-sitemap.php';
+		require_once __DIR__ . '/lib/wordpress-objects/wordpress-objects.php';
 
 		spl_autoload_register( function( $class ) {
 			$class = ltrim( $class, '\\' );
@@ -72,6 +73,12 @@ class runcommand {
 			$last = 'class-' . $last . '.php';
 			$parts[] = $last;
 			$file = dirname( __FILE__ ) . '/inc/' . str_replace( '_', '-', strtolower( implode( $parts, '/' ) ) );
+			if ( file_exists( $file ) ) {
+				require $file;
+			}
+
+			// Might be a trait
+			$file = str_replace( '/class-', '/trait-', $file );
 			if ( file_exists( $file ) ) {
 				require $file;
 			}
@@ -118,6 +125,14 @@ class runcommand {
 		// @codingStandardsIgnoreEnd
 		include $full_path;
 		return ob_get_clean();
+	}
+
+	/**
+	 * Get the current request URI
+	 */
+	public static function get_request_uri() {
+		// Accommodate subdirectory installs
+		return str_replace( parse_url( home_url(), PHP_URL_PATH ), '', $_SERVER['REQUEST_URI'] );
 	}
 
 }
