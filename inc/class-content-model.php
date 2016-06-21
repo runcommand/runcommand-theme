@@ -6,7 +6,7 @@ use League\CommonMark\CommonMarkConverter;
 
 class Content_Model extends Controller {
 
-	protected static $content_post_types = array(
+	protected static $custom_post_types = array(
 		'command',
 		'excerpt',
 	);
@@ -42,7 +42,7 @@ class Content_Model extends Controller {
 	}
 
 	public function action_init_register_post_types() {
-		foreach( self::$content_post_types as $post_type ) {
+		foreach( self::$custom_post_types as $post_type ) {
 			$args = array(
 				'hierarchical'            => false,
 				'public'                  => true,
@@ -115,7 +115,11 @@ class Content_Model extends Controller {
 	}
 
 	public static function get_post_types() {
-		return self::$content_post_types;
+		return self::$custom_post_types;
+	}
+
+	public static function get_content_post_types() {
+		return array_merge( array( 'post', 'page' ), self::$custom_post_types );
 	}
 
 }
