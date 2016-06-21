@@ -28,6 +28,8 @@ class Distribution_Metadata extends Controller {
 				echo '<meta property="' . esc_attr( $name ) . '" content="' . esc_attr( $value ) . '" />' . PHP_EOL;
 			}
 		}
+
+		echo \runcommand::get_template_part( 'header/favicons' );
 	}
 
 	public function filter_document_title_parts( $title ) {
