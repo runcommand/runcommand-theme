@@ -33,6 +33,11 @@ class Content_Model extends Controller {
 		add_filter( 'msm_sitemap_entry_post_type', function() {
 			return array( 'post', 'page', 'command' );
 		});
+		
+		// Transform endash back to -- to reverse wptexturize
+		add_filter( 'the_title', function( $title ) {
+			return str_replace( '&#8211;', '--', $title );
+		});
 
 		add_filter( 'the_content', function( $content ) {
 			$converter = new CommonMarkConverter;
