@@ -59,6 +59,7 @@ class runcommand {
 		require_once __DIR__ . '/vendor/autoload.php';
 		require_once __DIR__ . '/lib/rest-api/plugin.php';
 		require_once __DIR__ . '/lib/msm-sitemap/msm-sitemap.php';
+		require_once __DIR__ . '/lib/fieldmanager/fieldmanager.php';
 		require_once __DIR__ . '/lib/wordpress-objects/wordpress-objects.php';
 
 		spl_autoload_register( function( $class ) {
@@ -90,6 +91,7 @@ class runcommand {
 			'\runcommand\Assets',
 			'\runcommand\Content_Model',
 			'\runcommand\Distribution_Metadata',
+			'\runcommand\Fields\Distribution_Metadata',
 			'\runcommand\Query',
 			'\runcommand\REST\API',
 		);
