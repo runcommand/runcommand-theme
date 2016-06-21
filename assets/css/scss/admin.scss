@@ -1,0 +1,24 @@
+.runcommand-counter-wrap {
+	position:relative;
+}
+
+.runcommand-counter {
+	position: absolute;
+	right: 5px;
+	top: 3px;
+	color: #999;
+}
+
+.runcommand-counter.near-limit {
+	color: red;
+}
+
+.fm-distribution .fm-text {
+	max-width: 550px;
+	width: 100%;
+}
+
+.fm-distribution input[type="text"],
+.fm-distribution textarea {
+	width: 100%;
+}

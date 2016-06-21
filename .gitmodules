@@ -7,3 +7,6 @@
 [submodule "lib/wordpress-objects"]
 	path = lib/wordpress-objects
 	url = https://github.com/danielbachhuber/wordpress-objects.git
+[submodule "lib/fieldmanager"]
+	path = lib/fieldmanager
+	url = https://github.com/alleyinteractive/wordpress-fieldmanager.git
