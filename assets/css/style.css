@@ -6144,6 +6144,10 @@ header.site-header {
 
 header.page-header h2 {
   margin-bottom: 1rem; }
+  header.page-header h2 small {
+    font-size: 40%;
+    vertical-align: middle;
+    color: #ABABAB; }
 
 body.home .page-content {
   padding-top: 2rem; }

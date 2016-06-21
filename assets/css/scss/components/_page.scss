@@ -1,5 +1,11 @@
 header.page-header h2 {
 	margin-bottom: 1rem;
+
+	small {
+		font-size: 40%;
+		vertical-align: middle;
+		color: $medium-grey-color;
+	}
 }
 
 body.home .page-content {
