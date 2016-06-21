@@ -9,6 +9,7 @@ class Distribution_Metadata extends Controller {
 
 	protected function setup_actions() {
 		add_action( 'wp_head', array( $this, 'action_wp_head' ) );
+		add_action( 'admin_head', array( $this, 'action_admin_head' ) );
 	}
 
 	protected function setup_filters() {
@@ -29,6 +30,10 @@ class Distribution_Metadata extends Controller {
 			}
 		}
 
+		echo \runcommand::get_template_part( 'header/favicons' );
+	}
+
+	public function action_admin_head() {
 		echo \runcommand::get_template_part( 'header/favicons' );
 	}
 
