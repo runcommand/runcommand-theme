@@ -6,4 +6,4 @@
 	url = https://github.com/Automattic/msm-sitemap.git
 [submodule "lib/wordpress-objects"]
 	path = lib/wordpress-objects
-	url = git@github.com:danielbachhuber/wordpress-objects.git
+	url = https://github.com/danielbachhuber/wordpress-objects.git
