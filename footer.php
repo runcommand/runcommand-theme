@@ -34,11 +34,11 @@
 			<div class="columns medium-3">
 				<h4><a href="<?php echo esc_url( home_url( '/' ) ); ?>">runcommand</a></h4>
 				<ul class="footer-list">
-					<li><a href="#">About</a></li>
+					<li><a href="<?php echo esc_url( home_url( 'about/' ) ); ?>">About</a></li>
 					<li><a href="<?php echo esc_url( home_url( 'for-hosts/' ) ); ?>">For Hosts</a></li>
 					<li><a href="<?php echo esc_url( home_url( 'for-agencies/' ) ); ?>">For Agencies</a></li>
 					<li><a href="<?php echo esc_url( home_url( 'pricing/' ) ); ?>">Pricing</a></li>
-					<li><a href="#">Contact</a></li>
+					<li><a href="<?php echo esc_url( home_url( 'contact/' ) ); ?>">Contact</a></li>
 				</ul>
 			</div>
 			<div class="columns medium-3">
