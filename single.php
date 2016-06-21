@@ -10,7 +10,7 @@
 				<?php while( have_posts() ) : the_post(); ?>
 
 						<header class="page-header">
-							<h2><?php the_title(); ?></h2>
+							<h2><?php the_title(); ?><?php edit_post_link( ' <small><i class="fa fa-pencil"></i></small>' ); ?></h2>
 						</header>
 
 						<div class="page-content">
