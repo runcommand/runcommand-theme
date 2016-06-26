@@ -164,7 +164,7 @@ trait Distribution_Metadata {
 			case 'image':
 				$image_id = $this->get_meta( 'twitter_image' );
 				if ( intval( $image_id ) > 0 ) {
-					$image = \runcommand\Query::get_by_post_id( $image_id );
+					$image = \runcommand\Query::get_post_by_id( $image_id );
 					if ( $image instanceof \runcommand\Objects\Attachment ) {
 						$src = $image->get_src( 'twitter-card' );
 						return $src[0];
