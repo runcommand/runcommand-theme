@@ -14,7 +14,7 @@
 						</header>
 
 						<div class="page-content">
-							<p class="page-meta"><?php the_author(); ?> - <?php the_date(); ?></p>
+							<a href="https://twitter.com/danielbachhuber">@danielbachhuber</a> - <?php the_date(); ?></p>
 							<?php the_content(); ?>
 						</div>
 
