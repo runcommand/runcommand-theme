@@ -58,7 +58,7 @@
 				<?php endif; ?>
 				</ul>
 			</div>
-			<div class="columns medium-3 end">
+			<div class="columns medium-3">
 				<?php
 				$excerpt_query = new WP_Query( array(
 					'post_type'      => 'excerpt',
@@ -70,6 +70,22 @@
 				<ul class="footer-list">
 					<?php if ( $excerpt_query->have_posts() ) : ?>
 						<?php while( $excerpt_query->have_posts() ) : $excerpt_query->the_post(); ?>
+							<li><a title="<?php echo esc_attr( get_the_excerpt() ); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+						<?php endwhile; ?>
+					<?php endif; ?>
+				</ul>
+			</div>
+			<div class="columns medium-3 end">
+				<?php
+				$post_query = new WP_Query( array(
+					'post_type'      => 'post',
+					'posts_per_page' => 3,
+					'post_status'    => 'publish',
+				)); ?>
+				<h4><a href="<?php echo esc_url( home_url( 'blog/' ) ); ?>">Posts <small>(<?php echo (int) $post_query->found_posts; ?>)</small></a></h4>
+				<ul class="footer-list">
+					<?php if ( $post_query->have_posts() ) : ?>
+						<?php while( $post_query->have_posts() ) : $post_query->the_post(); ?>
 							<li><a title="<?php echo esc_attr( get_the_excerpt() ); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 						<?php endwhile; ?>
 					<?php endif; ?>
