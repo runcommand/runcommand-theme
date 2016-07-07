@@ -95,7 +95,7 @@ class Content_Model extends Controller {
 				case 'spark':
 					$singular = 'Spark';
 					$plural = 'Sparks';
-					$args['description'] = "You wish you had a WP-CLI command for this.";
+					$args['description'] = 'Everything you wish you had a WP-CLI command for.';
 					$args['menu_position'] = 8;
 					$args['menu_icon'] = 'dashicons-lightbulb';
 					$args['has_archive'] = 'sparks';
