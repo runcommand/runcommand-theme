@@ -91,7 +91,6 @@ class runcommand {
 			'\runcommand\Assets',
 			'\runcommand\Content_Model',
 			'\runcommand\Distribution_Metadata',
-			'\runcommand\Fields\Content_Model',
 			'\runcommand\Fields\Distribution_Metadata',
 			'\runcommand\Query',
 			'\runcommand\REST\API',
