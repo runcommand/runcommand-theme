@@ -9,6 +9,7 @@ class Content_Model extends Controller {
 	protected static $custom_post_types = array(
 		'command',
 		'excerpt',
+		'spark',
 	);
 
 	protected function setup_actions() {
@@ -23,6 +24,10 @@ class Content_Model extends Controller {
 			}
 			if ( 'to' === $wp->request ) {
 				wp_safe_redirect( home_url( 'excerpts/' ) );
+				exit;
+			}
+			if ( 'for' === $wp->request ) {
+				wp_safe_redirect( home_url( 'sparks/' ) );
 				exit;
 			}
 		});
@@ -82,10 +87,20 @@ class Content_Model extends Controller {
 					$singular = 'Excerpt';
 					$plural = 'Excerpts';
 					$args['menu_position'] = 7;
-					$args['menu_icon'] = 'dashicons-lightbulb';
+					$args['menu_icon'] = 'dashicons-info';
 					$args['has_archive'] = 'excerpts';
 					$args['rest_base'] = 'excerpts';
 					$args['rewrite']['slug'] = 'to';
+					break;
+				case 'spark':
+					$singular = 'Spark';
+					$plural = 'Sparks';
+					$args['description'] = "You wish you had a WP-CLI command for this.";
+					$args['menu_position'] = 8;
+					$args['menu_icon'] = 'dashicons-lightbulb';
+					$args['has_archive'] = 'sparks';
+					$args['rest_base'] = 'sparks';
+					$args['rewrite']['slug'] = 'for';
 					break;
 			}
 			$args['labels'] = array(
