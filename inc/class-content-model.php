@@ -71,6 +71,7 @@ class Content_Model extends Controller {
 				case 'command':
 					$singular = 'Command';
 					$plural = 'Commands';
+					$args['description'] = 'WP-CLI commands maintained by runcommand.';
 					$args['menu_position'] = 6;
 					$args['menu_icon'] = 'dashicons-editor-code';
 					$args['has_archive'] = 'commands';
@@ -81,6 +82,7 @@ class Content_Model extends Controller {
 				case 'excerpt':
 					$singular = 'Excerpt';
 					$plural = 'Excerpts';
+					$args['description'] = 'Continually updated micro-tutorials on how to solve different problems with WP-CLI.';
 					$args['menu_position'] = 7;
 					$args['menu_icon'] = 'dashicons-lightbulb';
 					$args['has_archive'] = 'excerpts';
