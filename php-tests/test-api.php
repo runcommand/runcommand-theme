@@ -11,6 +11,8 @@ class Test_API extends runcommand_REST_TestCase {
 			'/v1/commands/(?P<id>[\d]+)',
 			'/v1/excerpts',
 			'/v1/excerpts/(?P<id>[\d]+)',
+			'/v1/sparks',
+			'/v1/sparks/(?P<id>[\d]+)',
 		), array_keys( $routes ) );
 	}
 
