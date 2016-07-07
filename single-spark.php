@@ -15,6 +15,17 @@
 							<h2><?php the_title(); ?><?php edit_post_link( ' <small><i class="fa fa-pencil"></i></small>' ); ?></h2>
 						</header>
 
+						<div class="page-content">
+							<h3>Problem</h3>
+							<?php the_excerpt(); ?>
+							<h3>Proposed Algorithm</h3>
+							<?php if ( ! empty( get_the_content() ) ): ?>
+								<?php the_content(); ?>
+							<?php else: ?>
+								<div class="alert-box info">No proposed algorithm yet.</div>
+							<?php endif; ?>
+						</div>
+
 				<?php endwhile; ?>
 
 				</div>
