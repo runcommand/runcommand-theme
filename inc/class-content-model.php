@@ -30,10 +30,11 @@ class Content_Model extends Controller {
 
 	protected function setup_filters() {
 
-		add_filter( 'msm_sitemap_entry_post_type', function() {
-			return array( 'post', 'page', 'command' );
+		$custom_post_types = self::$custom_post_types;
+		add_filter( 'msm_sitemap_entry_post_type', function() use ( $custom_post_types ) {
+			return array_merge( array( 'post', 'page' ), $custom_post_types );
 		});
-		
+
 		// Transform endash back to -- to reverse wptexturize
 		add_filter( 'the_title', function( $title ) {
 			return str_replace( '&#8211;', '--', $title );
