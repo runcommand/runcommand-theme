@@ -5,13 +5,9 @@
 		<div class="row">
 			<div class="columns">
 
-			<header class="page-header">
-				<h2 class="page-title"><?php echo esc_html( get_queried_object()->label ); ?></h2>
-				<div class="page-description">
-					<p><?php echo esc_html( get_queried_object()->description ); ?></p>
-					<p>When you think "how can I do this with WP-CLI?", you'll find your answer in an excerpt.</p>
-				</div>
-			</header>
+			<?php echo runcommand::get_template_part( 'archive-page-header', array(
+				'extended_description' => 'When you think "how can I do this with WP-CLI?", you\'ll find your answer in an excerpt.',
+			) ); ?>
 
 		<?php if ( have_posts() ) : ?>
 
