@@ -6,8 +6,11 @@
 			<div class="columns">
 
 			<header class="page-header">
-				<h2 class="page-title">Excerpts</h2>
-				<p class="page-description">Excerpts are continually updated micro-tutorials on how to solve different problems with WP-CLI.</p>
+				<h2 class="page-title"><?php echo esc_html( get_queried_object()->label ); ?></h2>
+				<div class="page-description">
+					<p><?php echo esc_html( get_queried_object()->description ); ?></p>
+					<p>When you think "how can I do this with WP-CLI?", you'll find your answer in an excerpt.</p>
+				</div>
 			</header>
 
 		<?php if ( have_posts() ) : ?>
