@@ -103,6 +103,10 @@ class runcommand {
 	public function action_after_setup_theme() {
 
 		add_theme_support( 'title-tag' );
+		add_theme_support( 'post-thumbnails' );
+
+		add_image_size( 'twitter-card', 560, 294, true );
+		add_image_size( 'facebook-open-graph', 1200, 630, true );
 	}
 
 	/**
