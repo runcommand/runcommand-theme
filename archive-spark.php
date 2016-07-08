@@ -23,7 +23,7 @@
 				<?php while( have_posts() ) : the_post(); ?>
 					<tr>
 						<td>
-							<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+							<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 						</td>
 						<td>
 							<?php the_excerpt(); ?>
