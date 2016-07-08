@@ -60,7 +60,7 @@ class Distribution_Metadata extends Controller {
 
 	private function get_current_meta_description() {
 		if ( is_post_type_archive() && ! empty( get_queried_object()->description ) ) {
-			return rtrim( get_queried_object()->description, '.' );
+			return get_queried_object()->description;
 		} else if ( $post = $this->get_current_post() ) {
 			return $post->get_seo_description();
 		} else {
