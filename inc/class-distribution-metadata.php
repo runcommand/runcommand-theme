@@ -50,8 +50,18 @@ class Distribution_Metadata extends Controller {
 		return $title;
 	}
 
+	private function get_default_social_title() {
+		if ( is_post_type_archive() && ! empty( get_queried_object()->label ) ) {
+			return get_queried_object()->label;
+		} else {
+			return self::$default_title;
+		}
+	}
+
 	private function get_current_meta_description() {
-		if ( $post = $this->get_current_post() ) {
+		if ( is_post_type_archive() && ! empty( get_queried_object()->description ) ) {
+			return rtrim( get_queried_object()->description, '.' );
+		} else if ( $post = $this->get_current_post() ) {
 			return $post->get_seo_description();
 		} else {
 			return self::$default_description;
@@ -67,7 +77,7 @@ class Distribution_Metadata extends Controller {
 		$tags = array(
 			'og:site_name'   => 'runcommand',
 			'og:type'        => 'website',
-			'og:title'       => self::$default_title,
+			'og:title'       => $this->get_default_social_title(),
 			'og:description' => $this->get_current_meta_description(),
 			'og:url'         => home_url( \runcommand::get_request_uri() ),
 		);
@@ -97,7 +107,7 @@ class Distribution_Metadata extends Controller {
 		$tags = array(
 			'twitter:card'        => 'summary',
 			'twitter:site'        => '@runcommand',
-			'twitter:title'       => self::$default_title,
+			'twitter:title'       => $this->get_default_social_title(),
 			'twitter:description' => $this->get_current_meta_description(),
 			'twitter:url'         => esc_url( home_url( \runcommand::get_request_uri() ) ),
 			);
