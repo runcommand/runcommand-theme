@@ -60,6 +60,22 @@
 			</div>
 			<div class="columns medium-3">
 				<?php
+				$spark_query = new WP_Query( array(
+					'post_type'      => 'spark',
+					'posts_per_page' => 2,
+					'post_status'    => 'publish',
+				)); ?>
+				<h4><a href="<?php echo esc_url( home_url( 'sparks/' ) ); ?>">Sparks <small>(<?php echo (int) $spark_query->found_posts; ?>)</small></a></h4>
+				<ul class="footer-list">
+					<?php if ( $spark_query->have_posts() ) : ?>
+						<?php while( $spark_query->have_posts() ) : $spark_query->the_post(); ?>
+							<li><a title="<?php echo esc_attr( get_the_excerpt() ); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+						<?php endwhile; ?>
+					<?php endif; ?>
+				</ul>
+			</div>
+			<div class="columns medium-3 end">
+				<?php
 				$excerpt_query = new WP_Query( array(
 					'post_type'      => 'excerpt',
 					'posts_per_page' => 2,
@@ -70,22 +86,6 @@
 				<ul class="footer-list">
 					<?php if ( $excerpt_query->have_posts() ) : ?>
 						<?php while( $excerpt_query->have_posts() ) : $excerpt_query->the_post(); ?>
-							<li><a title="<?php echo esc_attr( get_the_excerpt() ); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-						<?php endwhile; ?>
-					<?php endif; ?>
-				</ul>
-			</div>
-			<div class="columns medium-3 end">
-				<?php
-				$spark_query = new WP_Query( array(
-					'post_type'      => 'spark',
-					'posts_per_page' => 3,
-					'post_status'    => 'publish',
-				)); ?>
-				<h4><a href="<?php echo esc_url( home_url( 'sparks/' ) ); ?>">Sparks <small>(<?php echo (int) $spark_query->found_posts; ?>)</small></a></h4>
-				<ul class="footer-list">
-					<?php if ( $spark_query->have_posts() ) : ?>
-						<?php while( $spark_query->have_posts() ) : $spark_query->the_post(); ?>
 							<li><a title="<?php echo esc_attr( get_the_excerpt() ); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 						<?php endwhile; ?>
 					<?php endif; ?>
