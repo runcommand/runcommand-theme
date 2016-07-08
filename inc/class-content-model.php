@@ -70,6 +70,7 @@ class Content_Model extends Controller {
 					'title',
 					'excerpt',
 					'editor',
+					'thumbnail',
 				)
 			);
 			switch ( $post_type ) {
