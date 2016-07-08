@@ -7,7 +7,7 @@
 			<div class="row">
 				<div class="columns">
 
-				<p>A list of the WP-CLI commands maintained by runcommmand.</p>
+				<?php echo runcommand::get_template_part( 'archive-page-header' ); ?>
 
 				<ul>
 					<?php while( have_posts() ) : the_post(); ?>
