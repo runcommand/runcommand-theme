@@ -45,10 +45,13 @@ class Content_Model extends Controller {
 			return str_replace( '&#8211;', '--', $title );
 		});
 
-		add_filter( 'the_content', function( $content ) {
+		$markdown_convert = function( $string ) {
 			$converter = new CommonMarkConverter;
-			return $converter->convertToHtml( $content );
-		}, 0 );
+			return $converter->convertToHtml( $string );
+		};
+		foreach( array( 'the_excerpt', 'the_content' ) as $filter ) {
+			add_filter( $filter, $markdown_convert, 0 );
+		}
 
 	}
 
