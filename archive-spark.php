@@ -36,6 +36,8 @@
 				</tbody>
 			</table>
 
+			<?php echo runcommand::get_template_part( 'pagination' ); ?>
+
 		<?php endif; ?>
 
 			</div>

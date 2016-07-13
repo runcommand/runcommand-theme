@@ -6155,6 +6155,9 @@ body.home .page-content {
 .page-content h3 {
   margin-bottom: 0.7rem; }
 
+body.post-type-archive-spark table {
+  width: 100%; }
+
 footer.site-footer {
   padding-top: 2rem;
   padding-bottom: 2rem; }
