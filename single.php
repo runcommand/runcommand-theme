@@ -27,6 +27,13 @@
 								</div>
 							</div>
 							<?php the_content(); ?>
+							<div class="content-meta row">
+								<div class="columns">
+									<?php echo runcommand::get_template_part( 'share-buttons', array(
+										'obj'  => runcommand\Query::get_post_by_id( get_the_ID() ),
+									) ); ?>
+								</div>
+							</div>
 						</div>
 
 				<?php endwhile; ?>
