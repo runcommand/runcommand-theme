@@ -14,16 +14,14 @@
 						</header>
 
 						<div class="page-content">
-							<div class="content-meta row">
+							<div class="content-meta content-meta-top row">
 								<div class="columns medium-7">
 									<a href="https://twitter.com/danielbachhuber">@danielbachhuber</a> - <?php the_date(); ?>
 								</div>
 								<div class="columns medium-4 end">
-									<div class="right">
-										<?php echo runcommand::get_template_part( 'share-buttons', array(
-											'obj'  => runcommand\Query::get_post_by_id( get_the_ID() ),
-										) ); ?>
-									</div>
+									<?php echo runcommand::get_template_part( 'share-buttons', array(
+										'obj'  => runcommand\Query::get_post_by_id( get_the_ID() ),
+									) ); ?>
 								</div>
 							</div>
 							<?php the_content(); ?>
