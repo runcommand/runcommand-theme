@@ -19,7 +19,7 @@
 									<a href="https://twitter.com/danielbachhuber">@danielbachhuber</a> - <?php the_date(); ?>
 								</div>
 								<div class="columns medium-5">
-									<a class="twitter-share-button" href="https://twitter.com/intent/tweet">Tweet</a>
+									<a class="twitter-share-button" href="https://twitter.com/intent/tweet"></a>
 									<div class="fb-like" data-href="<?php the_permalink(); ?>" data-layout="standard" data-action="like" data-show-faces="true"></div>
 								</div>
 							</div>

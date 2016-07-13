@@ -6158,6 +6158,10 @@ body.home .page-content {
 body.post-type-archive-spark table {
   width: 100%; }
 
+.content-meta .fb-like span {
+  width: auto !important;
+  vertical-align: top !important; }
+
 footer.site-footer {
   padding-top: 2rem;
   padding-bottom: 2rem; }
