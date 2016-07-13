@@ -18,9 +18,12 @@
 								<div class="columns medium-7">
 									<a href="https://twitter.com/danielbachhuber">@danielbachhuber</a> - <?php the_date(); ?>
 								</div>
-								<div class="columns medium-5">
-									<a class="twitter-share-button" href="https://twitter.com/intent/tweet"></a>
-									<div class="fb-like" data-href="<?php the_permalink(); ?>" data-layout="standard" data-action="like" data-show-faces="true"></div>
+								<div class="columns medium-4 end">
+									<div class="right">
+										<?php echo runcommand::get_template_part( 'share-buttons', array(
+											'obj'  => runcommand\Query::get_post_by_id( get_the_ID() ),
+										) ); ?>
+									</div>
 								</div>
 							</div>
 							<?php the_content(); ?>

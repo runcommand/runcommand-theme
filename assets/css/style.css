@@ -6158,7 +6158,7 @@ body.home .page-content {
 body.post-type-archive-spark table {
   width: 100%; }
 
-.content-meta .fb-like span {
+.share-buttons .fb-like span {
   width: auto !important;
   vertical-align: top !important; }
 
