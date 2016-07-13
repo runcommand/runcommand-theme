@@ -80,6 +80,9 @@ class Distribution_Metadata extends Controller {
 			'og:title'       => $this->get_default_social_title(),
 			'og:description' => $this->get_current_meta_description(),
 			'og:url'         => home_url( \runcommand::get_request_uri() ),
+			'og:image'       => get_template_directory_uri() . '/assets/images/facebook-default.png',
+			'og:image:width' => 1200,
+			'og:image:height'=> 630,
 		);
 
 		if ( $post = $this->get_current_post() ) {
@@ -110,6 +113,8 @@ class Distribution_Metadata extends Controller {
 			'twitter:title'       => $this->get_default_social_title(),
 			'twitter:description' => $this->get_current_meta_description(),
 			'twitter:url'         => esc_url( home_url( \runcommand::get_request_uri() ) ),
+			'twitter:image'       => get_template_directory_uri() . '/assets/images/twitter-default.png',
+			'twitter:card'        => 'summary_large_image',
 			);
 
 		if ( $post = $this->get_current_post() ) {
@@ -117,7 +122,6 @@ class Distribution_Metadata extends Controller {
 			$tags['twitter:description'] = $post->get_twitter_card_tag( 'description' );
 			$tags['twitter:url'] = $post->get_twitter_card_tag( 'url' );
 			if ( $image = $post->get_twitter_card_tag( 'image' ) ) {
-				$tags['twitter:card'] = 'summary_large_image';
 				$tags['twitter:image'] = $image;
 			}
 		}
