@@ -18,6 +18,13 @@
 						<div class="page-content">
 							<h3>Problem</h3>
 							<?php the_excerpt(); ?>
+							<div class="content-meta row">
+								<div class="columns">
+									<?php echo runcommand::get_template_part( 'share-buttons', array(
+										'obj'  => runcommand\Query::get_post_by_id( get_the_ID() ),
+									) ); ?>
+								</div>
+							</div>
 							<h3>Proposed Algorithm</h3>
 							<?php if ( ! empty( get_the_content() ) ): ?>
 								<?php the_content(); ?>
