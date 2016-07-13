@@ -17,6 +17,8 @@
 
 				</div>
 
+				<?php echo runcommand::get_template_part( 'pagination' ); ?>
+
 			</div>
 
 		<?php endif; ?>
