@@ -35,6 +35,7 @@
 				<h4><a href="<?php echo esc_url( home_url( '/' ) ); ?>">runcommand</a></h4>
 				<ul class="footer-list">
 					<li><a href="<?php echo esc_url( home_url( 'about/' ) ); ?>">About</a></li>
+					<li><a href="<?php echo esc_url( home_url( 'blog/' ) ); ?>">Blog</a></li>
 					<li><a href="<?php echo esc_url( home_url( 'for-hosts/' ) ); ?>">For Hosts</a></li>
 					<li><a href="<?php echo esc_url( home_url( 'for-agencies/' ) ); ?>">For Agencies</a></li>
 					<li><a href="<?php echo esc_url( home_url( 'pricing/' ) ); ?>">Pricing</a></li>

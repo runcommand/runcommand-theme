@@ -40,6 +40,21 @@ class Content_Model extends Controller {
 			return array_merge( array( 'post', 'page' ), $custom_post_types );
 		});
 
+		add_filter( 'register_post_type_args', function( $args, $post_type ) {
+			global $wp_rewrite;
+			if ( 'post' === $post_type ) {
+				$archive_slug = 'blog';
+				$args['has_archive'] = $archive_slug;
+				$archive_slug = $wp_rewrite->root . $archive_slug;
+				add_rewrite_rule( "{$archive_slug}/?$", "index.php?post_type=$post_type", 'top' );
+				$feeds = '(' . trim( implode( '|', $wp_rewrite->feeds ) ) . ')';
+				add_rewrite_rule( "{$archive_slug}/feed/$feeds/?$", "index.php?post_type=$post_type" . '&feed=$matches[1]', 'top' );
+				add_rewrite_rule( "{$archive_slug}/$feeds/?$", "index.php?post_type=$post_type" . '&feed=$matches[1]', 'top' );
+				add_rewrite_rule( "{$archive_slug}/{$wp_rewrite->pagination_base}/([0-9]{1,})/?$", "index.php?post_type=$post_type" . '&paged=$matches[1]', 'top' );
+			}
+			return $args;
+		}, 10, 2 );
+
 		// Transform endash back to -- to reverse wptexturize
 		add_filter( 'the_title', function( $title ) {
 			return str_replace( '&#8211;', '--', $title );
@@ -56,6 +71,7 @@ class Content_Model extends Controller {
 	}
 
 	public function action_init_register_post_types() {
+
 		foreach( self::$custom_post_types as $post_type ) {
 			$args = array(
 				'hierarchical'            => false,
