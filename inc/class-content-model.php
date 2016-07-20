@@ -148,6 +148,9 @@ class Content_Model extends Controller {
 		add_shortcode( 'pricing-grid', function() {
 			return \runcommand::get_template_part( 'pricing-grid' );
 		});
+		add_shortcode( 'newsletter-signup', function() {
+			return \runcommand::get_template_part( 'newsletter-signup' );
+		});
 	}
 
 	public function filter_post_type_link( $post_link, $post, $leavename, $sample ) {
