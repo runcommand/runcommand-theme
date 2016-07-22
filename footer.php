@@ -95,8 +95,8 @@
 		</script>
 	<?php endif; ?>
 
-	<script>!function(e,o,n){window.HSCW=o,window.HS=n,n.beacon=n.beacon||{};var t=n.beacon;t.userConfig={},t.readyQueue=[],t.config=function(e){this.userConfig=e},t.ready=function(e){this.readyQueue.push(e)},o.config={docs:{enabled:!1,baseUrl:""},contact:{enabled:!0,formId:"6045f2d7-37ca-11e6-aae8-0a7d6919297d"}};var r=e.getElementsByTagName("script")[0],c=e.createElement("script");c.type="text/javascript",c.async=!0,c.src="https://djtflbt20bdde.cloudfront.net/",r.parentNode.insertBefore(c,r)}(document,window.HSCW||{},window.HS||{});</script>
-	<script>
+	<script async>!function(e,o,n){window.HSCW=o,window.HS=n,n.beacon=n.beacon||{};var t=n.beacon;t.userConfig={},t.readyQueue=[],t.config=function(e){this.userConfig=e},t.ready=function(e){this.readyQueue.push(e)},o.config={docs:{enabled:!1,baseUrl:""},contact:{enabled:!0,formId:"6045f2d7-37ca-11e6-aae8-0a7d6919297d"}};var r=e.getElementsByTagName("script")[0],c=e.createElement("script");c.type="text/javascript",c.async=!0,c.src="https://djtflbt20bdde.cloudfront.net/",r.parentNode.insertBefore(c,r)}(document,window.HSCW||{},window.HS||{});</script>
+	<script async>
 		HS.beacon.config({
 			icon: 'question',
 			color: '#fd0a00',
@@ -105,7 +105,7 @@
 		});
 	</script>
 
-	<script>window.twttr = (function(d, s, id) {
+	<script async>window.twttr = (function(d, s, id) {
 		var js, fjs = d.getElementsByTagName(s)[0],
 		t = window.twttr || {};
 		if (d.getElementById(id)) return t;
@@ -123,7 +123,7 @@
 	}(document, "script", "twitter-wjs"));</script>
 
 	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
+	<script async>(function(d, s, id) {
 		var js, fjs = d.getElementsByTagName(s)[0];
 		if (d.getElementById(id)) return;
 		js = d.createElement(s); js.id = id;
