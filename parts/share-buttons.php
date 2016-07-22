@@ -10,5 +10,5 @@
 			), 'https://twitter.com/intent/tweet' );
 	?>
 	<a class="twitter-share-button" href="<?php echo esc_url( $twitter_url ); ?>"></a>
-	<div class="fb-like" data-href="<?php $obj->the_permalink(); ?>" data-layout="button_count" data-action="like" data-show-faces="false"></div>
+	<div class="fb-like" data-href="<?php $obj->the_permalink(); ?>" data-layout="button_count" data-action="recommend" data-show-faces="false"></div>
 </div>
