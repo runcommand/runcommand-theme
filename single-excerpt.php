@@ -16,8 +16,11 @@
 						</header>
 
 						<div class="page-content">
-							<div class="content-meta row">
-								<div class="columns">
+							<div class="content-meta content-meta-top row">
+								<div class="columns medium-7">
+									Updated <?php the_modified_date(); ?>
+								</div>
+								<div class="columns medium-4 end">
 									<?php echo runcommand::get_template_part( 'share-buttons', array(
 										'obj'  => runcommand\Query::get_post_by_id( get_the_ID() ),
 									) ); ?>

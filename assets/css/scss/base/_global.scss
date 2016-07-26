@@ -15,3 +15,7 @@ a.inverse {
 		padding: 0;
 	}
 }
+
+pre {
+	background-color: scale-color($black, $lightness: 10%);
+}
