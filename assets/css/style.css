@@ -6106,6 +6106,9 @@ a.inverse {
   padding: 0; }
 
 pre {
+  background-color: #1a1a1a; }
+
+pre {
   margin-bottom: 1.25rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem; }
