@@ -92,6 +92,7 @@ class runcommand {
 			'\runcommand\Content_Model',
 			'\runcommand\Distribution_Metadata',
 			'\runcommand\Fields\Distribution_Metadata',
+			'\runcommand\Integrations\Memberful',
 			'\runcommand\Query',
 			'\runcommand\REST\API',
 		);
