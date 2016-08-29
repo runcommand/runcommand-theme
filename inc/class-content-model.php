@@ -68,6 +68,14 @@ class Content_Model extends Controller {
 			add_filter( $filter, $markdown_convert, 0 );
 		}
 
+		// Ensure inline titles have link targets
+		add_filter( 'the_content', function( $content ){
+			$content = preg_replace_callback( '#(<h[1-4]>)(.+)</h[1-4]+#', function( $matches ){
+				return str_replace( $matches[1], rtrim( $matches[1], '>' ) . ' id="' . sanitize_key( $matches[2] ) . '">', $matches[0] );
+			}, $content );
+			return $content;
+		});
+
 	}
 
 	public function action_init_register_post_types() {
