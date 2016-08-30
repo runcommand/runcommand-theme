@@ -15,7 +15,7 @@
 					<li><a href="<?php echo esc_url( home_url( 'blog/' ) ); ?>">Blog</a></li>
 					<li><a href="<?php echo esc_url( home_url( 'for-hosts/' ) ); ?>">For Hosts</a></li>
 					<li><a href="<?php echo esc_url( home_url( 'for-agencies/' ) ); ?>">For Agencies</a></li>
-					<li><a href="<?php echo esc_url( home_url( 'pricing/' ) ); ?>">Pricing</a></li>
+					<?php /* <li><a href="<?php echo esc_url( home_url( 'pricing/' ) ); ?>">Pricing</a></li> */ ?>
 					<li><a href="<?php echo esc_url( home_url( 'contact/' ) ); ?>">Contact</a></li>
 				</ul>
 			</div>
