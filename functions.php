@@ -91,6 +91,7 @@ class runcommand {
 			'\runcommand\Assets',
 			'\runcommand\Content_Model',
 			'\runcommand\Distribution_Metadata',
+			'\runcommand\Fields\Command',
 			'\runcommand\Fields\Distribution_Metadata',
 			'\runcommand\Integrations\Memberful',
 			'\runcommand\Query',
