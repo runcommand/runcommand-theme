@@ -71,7 +71,8 @@ class Content_Model extends Controller {
 		// Ensure inline titles have link targets
 		add_filter( 'the_content', function( $content ){
 			$content = preg_replace_callback( '#(<h[1-4]>)(.+)</h[1-4]+#', function( $matches ){
-				return str_replace( $matches[1], rtrim( $matches[1], '>' ) . ' id="' . sanitize_key( $matches[2] ) . '">', $matches[0] );
+				$id = sanitize_key( str_replace( ' ', '-', html_entity_decode( $matches[2] ) ) );
+				return str_replace( $matches[1], rtrim( $matches[1], '>' ) . ' id="' . esc_attr( $id ) . '">', $matches[0] );
 			}, $content );
 			return $content;
 		});
