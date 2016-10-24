@@ -30,6 +30,12 @@ class Content_Model extends Controller {
 				wp_safe_redirect( home_url( 'sparks/' ) );
 				exit;
 			}
+
+			if ( 'pricing' === $wp->request ) {
+				wp_safe_redirect( home_url( 'plans/' ) );
+				exit;
+			}
+
 		});
 	}
 
