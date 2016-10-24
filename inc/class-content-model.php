@@ -31,11 +31,6 @@ class Content_Model extends Controller {
 				exit;
 			}
 
-			if ( 'pricing' === $wp->request ) {
-				wp_safe_redirect( home_url( 'plans/' ) );
-				exit;
-			}
-
 		});
 	}
 
