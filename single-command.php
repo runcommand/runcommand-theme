@@ -23,6 +23,7 @@
 						</header>
 
 						<div class="page-content">
+							<?php the_content(); ?>
 							<div class="content-meta row">
 								<div class="columns">
 									<?php echo runcommand::get_template_part( 'share-buttons', array(
@@ -30,7 +31,6 @@
 									) ); ?>
 								</div>
 							</div>
-							<?php the_content(); ?>
 						</div>
 
 				<?php endwhile; ?>
