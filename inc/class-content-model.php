@@ -61,6 +61,15 @@ class Content_Model extends Controller {
 			return str_replace( '&#8211;', '--', $title );
 		});
 
+		// Inject the newsletter signup form before Using
+		add_filter( 'the_content', function( $content ){
+			$search = '## Using';
+			if ( false !== strpos( $content, '## Overview' ) ) {
+				$search = '## Overview';
+			}
+			return str_replace( $search, '[newsletter-signup]' . PHP_EOL . PHP_EOL . $search, $content );
+		}, 0 );
+
 		$markdown_convert = function( $string ) {
 			$converter = new CommonMarkConverter;
 			return $converter->convertToHtml( $string );
