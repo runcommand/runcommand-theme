@@ -2,7 +2,11 @@
 
 namespace runcommand;
 
-use League\CommonMark\CommonMarkConverter;
+use League\CommonMark\Converter;
+use League\CommonMark\DocParser;
+use League\CommonMark\Environment;
+use League\CommonMark\HtmlRenderer;
+use Webuni\CommonMark\TableExtension\TableExtension;
 
 class Content_Model extends Controller {
 
@@ -71,7 +75,9 @@ class Content_Model extends Controller {
 		}, 0 );
 
 		$markdown_convert = function( $string ) {
-			$converter = new CommonMarkConverter;
+			$environment = Environment::createCommonMarkEnvironment();
+			$environment->addExtension( new TableExtension() );
+			$converter = new Converter( new DocParser( $environment ), new HtmlRenderer( $environment ) );
 			return $converter->convertToHtml( $string );
 		};
 		foreach( array( 'the_excerpt', 'the_content' ) as $filter ) {

@@ -4,6 +4,40 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 ## [Unreleased][unreleased]
 
+## [0.15.0] - 2016-09-14
+
+### Added
+ - Added preliminary support for PHP 7.1 (#259)
+ - Added more regression tests (#258, #260)
+
+### Changed
+ - Bumped spec target version to 0.26 (#260)
+ - The `CursorState` constructor requires an additional parameter (#258)
+ - Ordered lists cannot interupt a paragraph unless they start with `1` (#260)
+ - Blank list items cannot interupt a paragraph (#260)
+
+### Deprecated
+ - Deprecated `DelimiterStack::findFirstMatchingOpener()` - use `findMatchingOpener()` instead (#260)
+
+### Fixed
+ - Fixed tabs in ATX headers and thematic breaks (#260)
+ - Fixed issue where cursor state was not being restored properly (#258, #260)
+   - This fixed the lists-with-tabs regression reported in #258
+
+### Removed
+ - Removed an unnecessary check in `Cursor::advanceBy()` (#260)
+ - Removed the two-blanks-break-out-of-lists feature (#260)
+
+
+## [0.14.0] - 2016-07-02
+### Added
+ - The `safe` option is deprecated and replaced by 2 new options (#253, #255):
+   - `html_input` (`strip`, `allow` or `escape`): how to handle untrusted HTML input (the default is `strip` for BC reasons)
+   - `allow_unsafe_links` (`true` or `false`): whether to allow risky image URLs and links (the default is `true` for BC reasons)
+
+### Deprecated
+ - The `safe` option is now deprecated and will be removed in the 1.0.0 release.
+
 ## [0.13.4] - 2016-06-14
 
 ### Fixed
@@ -412,7 +446,9 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Added
  - Initial commit (compatible with jgm/stmd:spec.txt @ 0275f34)
 
-[unreleased]: https://github.com/thephpleague/commonmark/compare/0.13.4...HEAD
+[unreleased]: https://github.com/thephpleague/commonmark/compare/0.15.0...HEAD
+[0.15.0]: https://github.com/thephpleague/commonmark/compare/0.14.0...0.15.0
+[0.14.0]: https://github.com/thephpleague/commonmark/compare/0.13.4...0.14.0
 [0.13.4]: https://github.com/thephpleague/commonmark/compare/0.13.3...0.13.4
 [0.13.3]: https://github.com/thephpleague/commonmark/compare/0.13.2...0.13.3
 [0.13.2]: https://github.com/thephpleague/commonmark/compare/0.13.1...0.13.2
