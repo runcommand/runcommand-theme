@@ -7,6 +7,10 @@ namespace Composer\Autoload;
 class ComposerStaticInit15db891d082683c0df4f5f30c5605b1a
 {
     public static $prefixLengthsPsr4 = array (
+        'W' => 
+        array (
+            'Webuni\\CommonMark\\TableExtension\\' => 33,
+        ),
         'L' => 
         array (
             'League\\CommonMark\\' => 18,
@@ -14,6 +18,10 @@ class ComposerStaticInit15db891d082683c0df4f5f30c5605b1a
     );
 
     public static $prefixDirsPsr4 = array (
+        'Webuni\\CommonMark\\TableExtension\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/webuni/commonmark-table-extension/src',
+        ),
         'League\\CommonMark\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/commonmark/src',
