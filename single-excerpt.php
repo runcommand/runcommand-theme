@@ -22,7 +22,7 @@
 								) );
 								foreach( $commands as $command ) : ?>
 									<div class="panel">
-										<p><a href="<?php echo get_permalink( $command->ID ); ?>"><strong>wp <?php echo apply_filters( 'the_title', $command->post_title ); ?></strong></a> - <?php echo $command->post_excerpt; ?></p>
+										<p><a href="<?php echo get_permalink( $command->ID ); ?>"><strong>wp <?php echo apply_filters( 'the_title', $command->post_title ); ?></strong> - <?php echo $command->post_excerpt; ?></a></p>
 									</div>
 								<?php endforeach; ?>
 							<?php the_content(); ?>
