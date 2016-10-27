@@ -6128,7 +6128,8 @@ code {
       font-size: 2rem; } }
 
 header.site-header {
-  padding-top: 1rem; }
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
   header.site-header .header-nav {
     margin-top: 0.5rem;
     margin-bottom: 0; }

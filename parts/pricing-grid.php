@@ -1,4 +1,4 @@
-<ul class="medium-block-grid-2 pricing-grid">
+<ul class="small-block-grid-1 medium-block-grid-2 pricing-grid">
 	<li>
 		<ul class="pricing-table">
 			<li class="title">Gold</li>
