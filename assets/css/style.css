@@ -6128,21 +6128,27 @@ code {
       font-size: 2rem; } }
 
 header.site-header {
-  padding-top: 2rem; }
+  padding-top: 1rem; }
   header.site-header .header-nav {
     margin-top: 0.5rem;
     margin-bottom: 0; }
+    @media only screen and (min-width: 40.0625em) {
+      header.site-header .header-nav {
+        float: right; } }
   header.site-header .site-title {
     font-size: 1.75rem; }
     header.site-header .site-title img {
       height: 2rem;
       margin-right: .25rem;
       margin-top: -0.4rem; }
-  header.site-header .social {
-    margin-left: 0.5rem; }
-    header.site-header .social a {
+  header.site-header .connect {
+    font-size: 0.8rem;
+    margin-bottom: 0; }
+    header.site-header .connect li {
+      margin-left: 0.8rem; }
+    header.site-header .connect a {
       color: #ABABAB; }
-      header.site-header .social a:hover {
+      header.site-header .connect a:hover {
         color: inherit; }
 
 header.page-header h2 {

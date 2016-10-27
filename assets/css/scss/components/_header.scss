@@ -1,9 +1,12 @@
 header.site-header {
-	padding-top: 2rem;
+	padding-top: 1rem;
 	
 	.header-nav {
 		margin-top: 0.5rem;
 		margin-bottom: 0;
+		@media #{$medium-up} {
+			float: right;
+		}
 	}
 	
 	.site-title {
@@ -16,8 +19,12 @@ header.site-header {
 		}
 	}
 
-	.social {
-		margin-left: 0.5rem;
+	.connect {
+		font-size: 0.8rem;
+		margin-bottom: 0;
+		li {
+			margin-left: 0.8rem;
+		}
 		a {
 			color: $medium-grey-color;
 			&:hover {
