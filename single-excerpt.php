@@ -21,7 +21,7 @@
 									'post_type'       => 'command',
 								) );
 								foreach( $commands as $command ) : ?>
-									<div class="panel callout">
+									<div class="panel">
 										<p><a href="<?php echo get_permalink( $command->ID ); ?>"><strong>wp <?php echo apply_filters( 'the_title', $command->post_title ); ?></strong></a> - <?php echo $command->post_excerpt; ?></p>
 									</div>
 								<?php endforeach; ?>
