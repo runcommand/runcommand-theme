@@ -60,6 +60,7 @@ class runcommand {
 		require_once __DIR__ . '/lib/rest-api/plugin.php';
 		require_once __DIR__ . '/lib/msm-sitemap/msm-sitemap.php';
 		require_once __DIR__ . '/lib/fieldmanager/fieldmanager.php';
+		require_once __DIR__ . '/lib/posts-to-posts/posts-to-posts.php';
 		require_once __DIR__ . '/lib/wordpress-objects/wordpress-objects.php';
 
 		spl_autoload_register( function( $class ) {

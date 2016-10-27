@@ -19,6 +19,7 @@ class Content_Model extends Controller {
 	protected function setup_actions() {
 		add_action( 'init', array( $this, 'action_init_register_post_types' ) );
 		add_action( 'init', array( $this, 'action_init_register_shortcodes' ) );
+		add_action( 'p2p_init', array( $this, 'action_p2p_init_register_connections' ) );
 		add_action( 'template_redirect', function() {
 			global $wp;
 
@@ -167,6 +168,24 @@ class Content_Model extends Controller {
 			);
 			register_post_type( $post_type, $args );
 		}
+	}
+
+	public function action_p2p_init_register_connections() {
+		p2p_register_connection_type( array(
+			'name'           => 'command_to_excerpt',
+			'from'           => 'command',
+			'to'             => 'excerpt',
+			'sortable'       => 'from',
+			'admin_column'   => 'any',
+			'title'          => array(
+				'from'       => 'Excerpts',
+				'to'         => 'Commands',
+			),
+			'admin_box'      => array(
+				'show'       => 'any',
+				'context'    => 'side'
+			)
+		) );
 	}
 
 	public function action_init_register_shortcodes() {
