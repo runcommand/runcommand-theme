@@ -95,6 +95,8 @@ class Content_Model extends Controller {
 
 	public function action_init_register_post_types() {
 
+		add_post_type_support( 'page', 'excerpt' );
+
 		foreach( self::$custom_post_types as $post_type ) {
 			$args = array(
 				'hierarchical'            => false,
