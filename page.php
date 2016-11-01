@@ -54,7 +54,7 @@
 						'posts_per_page'  => 5,
 					) );
 					if ( ! empty( $excerpts ) ) : ?>
-					<h5>How-Tos</h5>
+					<h5>Recent How-Tos</h5>
 					<ul>
 						<?php foreach( $excerpts as $excerpt ) : ?>
 							<li><a href="<?php echo get_permalink( $excerpt->ID ); ?>"><?php echo apply_filters( 'the_title', $excerpt->post_title ); ?></a></li>
