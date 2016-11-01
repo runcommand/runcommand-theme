@@ -10,7 +10,7 @@
 			<li class="bullet-item">3 Github-based developer seats</li>
 			<li class="bullet-item">runcommand presence in your Slack</li>
 			<li class="bullet-item">Quarterly video conference</li>
-			<li class="cta-button"><a class="button" href="https://runcommand.typeform.com/to/BpblUg">Sign Up</a></li>
+			<li class="cta-button"><a class="button" href="https://runcommand.typeform.com/to/BpblUg">Apply Now</a></li>
 		</ul>
 	</li>
 	<li>
@@ -22,7 +22,7 @@
 			<li class="bullet-item">Best-effort response time</li>
 			<li class="bullet-item">3 support seats</li>
 			<li class="bullet-item">1 Github-based developer seat</li>
-			<li class="cta-button"><a class="button" href="https://runcommand.typeform.com/to/BpblUg">Sign Up</a></li>
+			<li class="cta-button"><a class="button" href="https://runcommand.typeform.com/to/BpblUg">Apply Now</a></li>
 		</ul>
 	</li>
 </ul>
