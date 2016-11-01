@@ -34,8 +34,16 @@
 						'connected_items' => get_the_ID(),
 						'post_type'       => 'post',
 					) );
+					$title = 'Updates';
+					if ( empty( $posts ) ) {
+						$posts = get_posts( array(
+							'post_type'       => 'post',
+							'posts_per_page'  => 5,
+						) );
+						$title = 'From The Blog';
+					}
 					if ( ! empty( $posts ) ) : ?>
-					<h5>Updates</h5>
+					<h5><?php echo $title; ?></h5>
 					<ul>
 						<?php foreach( $posts as $p ) : ?>
 							<li><a href="<?php echo get_permalink( $p->ID ); ?>"><?php echo apply_filters( 'the_title', $p->post_title ); ?></a></li>
@@ -48,8 +56,14 @@
 						'connected_items' => get_the_ID(),
 						'post_type'       => 'excerpt',
 					) );
+					if ( empty( $excerpts ) ) {
+						$excerpts = get_posts( array(
+							'post_type'       => 'excerpt',
+							'posts_per_page'  => 5,
+						) );
+					}
 					if ( ! empty( $excerpts ) ) : ?>
-					<h5>Excerpts</h5>
+					<h5>Recent How-Tos</h5>
 					<ul>
 						<?php foreach( $excerpts as $excerpt ) : ?>
 							<li><a href="<?php echo get_permalink( $excerpt->ID ); ?>"><?php echo apply_filters( 'the_title', $excerpt->post_title ); ?></a></li>
