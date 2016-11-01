@@ -72,11 +72,24 @@ class Content_Model extends Controller {
 			return str_replace( $search, '[newsletter-signup]' . PHP_EOL . PHP_EOL . $search, $content );
 		}, 0 );
 
+		// Inject the Buy Now button into premium commands
+		add_filter( 'the_content', function( $content ) {
+			$button_label = get_post_meta( get_the_ID(), 'purchase_button_label', true );
+			$button_url = get_post_meta( get_the_ID(), 'purchase_button_url', true );
+			if ( ! $button_label || ! $button_url ) {
+				return $content;
+			}
+			$button = '<a class="button right" href="' . esc_url( $button_url ) . '">' . esc_html( $button_label ) . '</a>';
+			$search = stripos( $content, '## Overview' ) ? '## Overview' : '## Using';
+			return str_replace( $search, $button . PHP_EOL . PHP_EOL . $search, $content );
+		}, 0 );
+
 		$markdown_convert = function( $string ) {
 			$environment = Environment::createCommonMarkEnvironment();
 			$environment->addExtension( new TableExtension() );
 			$converter = new Converter( new DocParser( $environment ), new HtmlRenderer( $environment ) );
-			return $converter->convertToHtml( $string );
+			$retval = $converter->convertToHtml( $string );
+			return str_replace( '<br>', '', $retval );
 		};
 		foreach( array( 'the_excerpt', 'the_content' ) as $filter ) {
 			add_filter( $filter, $markdown_convert, 0 );
@@ -170,6 +183,21 @@ class Content_Model extends Controller {
 	}
 
 	public function action_p2p_init_register_connections() {
+		p2p_register_connection_type( array(
+			'name'           => 'command_to_post',
+			'from'           => 'command',
+			'to'             => 'post',
+			'sortable'       => 'from',
+			'admin_column'   => 'any',
+			'title'          => array(
+				'from'       => 'Posts',
+				'to'         => 'Commands',
+			),
+			'admin_box'      => array(
+				'show'       => 'any',
+				'context'    => 'side'
+			)
+		) );
 		p2p_register_connection_type( array(
 			'name'           => 'command_to_excerpt',
 			'from'           => 'command',

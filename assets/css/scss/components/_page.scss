@@ -15,3 +15,37 @@ body.home .page-content {
 .page-content h3 {
 	margin-bottom: 0.7rem;
 }
+
+body.single-command {
+	.page-content {
+		p:first-child {
+			margin-top: 3rem;
+			margin-bottom: 3rem;
+			font-size: 2.5rem;
+			color: $white;
+			background-color: $primary-color;
+			padding-left: .4rem;
+			padding-right: .4rem;
+			@media #{$small-only} {
+				margin-top: 2rem;
+				margin-bottom: 2rem;
+				font-size: 1.75rem;
+			}
+		}
+		p:nth-child(2) {
+			margin-bottom: 3rem;
+			@media #{$small-only} {
+				margin-bottom: 2rem;
+			}
+		}
+	}
+
+	.sidebar {
+		ul {
+			font-size: .8rem;
+		}
+		@media #{$medium-up} {
+			margin-top: 30rem;
+		}
+	}
+}
