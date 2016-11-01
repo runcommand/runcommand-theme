@@ -41,11 +41,17 @@ body.single-command {
 	}
 
 	.sidebar {
-		ul {
-			font-size: .8rem;
-		}
 		@media #{$medium-up} {
 			margin-top: 30rem;
 		}
+	}
+}
+
+.sidebar {
+	ul {
+		font-size: .8rem;
+	}
+	@media #{$medium-up} {
+		margin-top: 5rem;
 	}
 }

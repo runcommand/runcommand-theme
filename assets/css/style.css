@@ -6186,12 +6186,16 @@ body.single-command .page-content p:nth-child(2) {
     body.single-command .page-content p:nth-child(2) {
       margin-bottom: 2rem; } }
 
-body.single-command .sidebar ul {
-  font-size: .8rem; }
-
 @media only screen and (min-width: 40.0625em) {
   body.single-command .sidebar {
     margin-top: 30rem; } }
+
+.sidebar ul {
+  font-size: .8rem; }
+
+@media only screen and (min-width: 40.0625em) {
+  .sidebar {
+    margin-top: 5rem; } }
 
 body.post-type-archive-spark table {
   width: 100%; }
