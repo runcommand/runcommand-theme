@@ -1,4 +1,4 @@
-<ul class="small-block-grid-1 medium-block-grid-2 pricing-grid">
+<ul class="small-block-grid-1 medium-block-grid-3 pricing-grid">
 	<li>
 		<ul class="pricing-table">
 			<li class="title">Gold</li>
@@ -10,7 +10,7 @@
 			<li class="bullet-item">3 Github-based developer seats</li>
 			<li class="bullet-item">runcommand presence in your Slack</li>
 			<li class="bullet-item">Quarterly video conference</li>
-			<li class="cta-button"><a class="button" href="https://runcommand.typeform.com/to/BpblUg">Apply Now</a></li>
+			<li class="cta-button"><a class="button" href="https://runcommand.typeform.com/to/BpblUg">Apply</a></li>
 		</ul>
 	</li>
 	<li>
@@ -22,7 +22,17 @@
 			<li class="bullet-item">Best-effort response time</li>
 			<li class="bullet-item">3 support seats</li>
 			<li class="bullet-item">1 Github-based developer seat</li>
-			<li class="cta-button"><a class="button" href="https://runcommand.typeform.com/to/BpblUg">Apply Now</a></li>
+			<li class="cta-button"><a class="button" href="https://runcommand.typeform.com/to/BpblUg">Apply</a></li>
+		</ul>
+	</li>
+	<li>
+		<ul class="pricing-table">
+			<li class="title">Open Source</li>
+			<li class="price">$149<br/><small>per quarter</small></li>
+			<li class="bullet-item">WP-CLI operational support</li>
+			<li class="bullet-item">Best-effort response time</li>
+			<li class="bullet-item">1 support seat</li>
+			<li class="cta-button"><a class="button" href="https://runcommand.memberful.com/checkout?plan=16749">Buy Now</a></li>
 		</ul>
 	</li>
 </ul>
