@@ -31,7 +31,7 @@
 					<h5>Premium Commands</h5>
 					<ul>
 						<?php foreach( $commands as $command ) : ?>
-							<li><a href="<?php echo get_permalink( $command->ID ); ?>"><?php echo apply_filters( 'the_title', $command->post_title ); ?></a></li>
+							<li><a href="<?php echo get_permalink( $command->ID ); ?>"><?php echo apply_filters( 'the_title', $command->post_title ); ?></a> - <?php echo str_replace( array( '<p>', '</p>' ), '', apply_filters( 'the_excerpt', $command->post_excerpt ) ); ?></li>
 						<?php endforeach; ?>
 					</ul>
 					<?php endif; ?>
@@ -45,6 +45,19 @@
 					<ul>
 						<?php foreach( $posts as $p ) : ?>
 							<li><a href="<?php echo get_permalink( $p->ID ); ?>"><?php echo apply_filters( 'the_title', $p->post_title ); ?></a></li>
+						<?php endforeach; ?>
+					</ul>
+					<?php endif; ?>
+					<?php
+					$excerpts = get_posts( array(
+						'post_type'       => 'excerpt',
+						'posts_per_page'  => 5,
+					) );
+					if ( ! empty( $excerpts ) ) : ?>
+					<h5>How-Tos</h5>
+					<ul>
+						<?php foreach( $excerpts as $excerpt ) : ?>
+							<li><a href="<?php echo get_permalink( $excerpt->ID ); ?>"><?php echo apply_filters( 'the_title', $excerpt->post_title ); ?></a></li>
 						<?php endforeach; ?>
 					</ul>
 					<?php endif; ?>
