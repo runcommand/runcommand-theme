@@ -128,6 +128,7 @@ class Content_Model extends Controller {
 					'excerpt',
 					'editor',
 					'thumbnail',
+					'revisions',
 				)
 			);
 			switch ( $post_type ) {
