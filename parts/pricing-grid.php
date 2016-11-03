@@ -32,7 +32,7 @@
 			<li class="bullet-item">WP-CLI operational support</li>
 			<li class="bullet-item">Best-effort response time</li>
 			<li class="bullet-item">1 support seat</li>
-			<li class="cta-button"><a class="button" href="https://runcommand.memberful.com/checkout?plan=16749">Buy Now</a></li>
+			<li class="cta-button"><a class="button" href="https://runcommand.memberful.com/checkout?plan=16749">Sign Up</a></li>
 		</ul>
 	</li>
 </ul>
