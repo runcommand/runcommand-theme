@@ -2,7 +2,7 @@
 
 namespace runcommand\Objects;
 
-class Excerpt extends Base_Post {
+class Tip extends Base_Post {
 
 	use Traits\Distribution_Metadata;
 

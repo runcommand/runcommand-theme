@@ -54,16 +54,16 @@
 			</div>
 			<div class="columns medium-3 end">
 				<?php
-				$excerpt_query = new WP_Query( array(
-					'post_type'      => 'excerpt',
+				$tip_query = new WP_Query( array(
+					'post_type'      => 'tip',
 					'posts_per_page' => 2,
 					'post_status'    => 'publish',
 					'orderby'        => 'modified',
 				)); ?>
-				<h4><a href="<?php echo esc_url( home_url( 'excerpts/' ) ); ?>">Excerpts <small>(<?php echo (int) $excerpt_query->found_posts; ?>)</small></a></h4>
+				<h4><a href="<?php echo esc_url( home_url( 'tips/' ) ); ?>">Tips <small>(<?php echo (int) $tip_query->found_posts; ?>)</small></a></h4>
 				<ul class="footer-list">
-					<?php if ( $excerpt_query->have_posts() ) : ?>
-						<?php while( $excerpt_query->have_posts() ) : $excerpt_query->the_post(); ?>
+					<?php if ( $tip_query->have_posts() ) : ?>
+						<?php while( $tip_query->have_posts() ) : $tip_query->the_post(); ?>
 							<li><a title="<?php echo esc_attr( get_the_excerpt() ); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 						<?php endwhile; ?>
 					<?php endif; ?>

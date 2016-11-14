@@ -16,7 +16,7 @@
 						<div class="page-content">
 							<?php
 								$commands = get_posts( array(
-									'connected_type'  => 'command_to_excerpt',
+									'connected_type'  => 'command_to_tip',
 									'connected_items' => get_the_ID(),
 									'post_type'       => 'command',
 								) );
@@ -61,17 +61,17 @@
 					</ul>
 					<?php endif; ?>
 					<?php
-					$args = array( 'post_type' => 'excerpt' );
+					$args = array( 'post_type' => 'tip' );
 					if ( $matched_command ) {
-						$args['connected_type'] = 'command_to_excerpt';
+						$args['connected_type'] = 'command_to_tip';
 						$args['connected_items'] = $matched_command;
 					}
-					$excerpts = get_posts( $args );
-					if ( ! empty( $excerpts ) ) : ?>
+					$tips = get_posts( $args );
+					if ( ! empty( $tips ) ) : ?>
 					<h5><?php echo $matched_command ? 'Related ' : ''; ?>Excerpts</h5>
 					<ul>
-						<?php foreach( $excerpts as $excerpt ) : ?>
-							<li><a href="<?php echo get_permalink( $excerpt->ID ); ?>"><?php echo apply_filters( 'the_title', $excerpt->post_title ); ?></a></li>
+						<?php foreach( $tips as $tip ) : ?>
+							<li><a href="<?php echo get_permalink( $tip->ID ); ?>"><?php echo apply_filters( 'the_title', $tip->post_title ); ?></a></li>
 						<?php endforeach; ?>
 					</ul>
 					<?php endif; ?>

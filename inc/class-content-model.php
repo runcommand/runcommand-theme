@@ -12,7 +12,7 @@ class Content_Model extends Controller {
 
 	protected static $custom_post_types = array(
 		'command',
-		'excerpt',
+		'tip',
 		'spark',
 	);
 
@@ -28,7 +28,11 @@ class Content_Model extends Controller {
 				exit;
 			}
 			if ( 'to' === $wp->request ) {
-				wp_safe_redirect( home_url( 'excerpts/' ) );
+				wp_safe_redirect( home_url( 'tips/' ) );
+				exit;
+			}
+			if ( 'excerpts' === $wp->request ) {
+				wp_safe_redirect( home_url( 'tips/' ) );
 				exit;
 			}
 			if ( 'for' === $wp->request ) {
@@ -143,14 +147,14 @@ class Content_Model extends Controller {
 					$args['rest_controller_class'] = '\runcommand\REST\Commands_Controller';
 					$args['rewrite']['slug'] = 'wp';
 					break;
-				case 'excerpt':
-					$singular = 'Excerpt';
-					$plural = 'Excerpts';
+				case 'tip':
+					$singular = 'Tip';
+					$plural = 'Tips';
 					$args['description'] = 'Continually updated micro-tutorials on how to solve different problems with WP-CLI.';
 					$args['menu_position'] = 7;
 					$args['menu_icon'] = 'dashicons-info';
-					$args['has_archive'] = 'excerpts';
-					$args['rest_base'] = 'excerpts';
+					$args['has_archive'] = 'tips';
+					$args['rest_base'] = 'tips';
 					$args['rewrite']['slug'] = 'to';
 					break;
 				case 'spark':
@@ -200,13 +204,13 @@ class Content_Model extends Controller {
 			)
 		) );
 		p2p_register_connection_type( array(
-			'name'           => 'command_to_excerpt',
+			'name'           => 'command_to_tip',
 			'from'           => 'command',
-			'to'             => 'excerpt',
+			'to'             => 'tip',
 			'sortable'       => 'from',
 			'admin_column'   => 'any',
 			'title'          => array(
-				'from'       => 'Excerpts',
+				'from'       => 'Tips',
 				'to'         => 'Commands',
 			),
 			'admin_box'      => array(

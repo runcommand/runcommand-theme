@@ -51,22 +51,22 @@
 					</ul>
 					<?php endif; ?>
 					<?php
-					$excerpts = get_posts( array(
-						'connected_type'  => 'command_to_excerpt',
+					$tips = get_posts( array(
+						'connected_type'  => 'command_to_tip',
 						'connected_items' => get_the_ID(),
-						'post_type'       => 'excerpt',
+						'post_type'       => 'tip',
 					) );
-					if ( empty( $excerpts ) ) {
-						$excerpts = get_posts( array(
-							'post_type'       => 'excerpt',
+					if ( empty( $tips ) ) {
+						$tips = get_posts( array(
+							'post_type'       => 'tip',
 							'posts_per_page'  => 5,
 						) );
 					}
-					if ( ! empty( $excerpts ) ) : ?>
-					<h5>Recent How-Tos</h5>
+					if ( ! empty( $tips ) ) : ?>
+					<h5>Recent Tips</h5>
 					<ul>
-						<?php foreach( $excerpts as $excerpt ) : ?>
-							<li><a href="<?php echo get_permalink( $excerpt->ID ); ?>"><?php echo apply_filters( 'the_title', $excerpt->post_title ); ?></a></li>
+						<?php foreach( $tips as $tip ) : ?>
+							<li><a href="<?php echo get_permalink( $tip->ID ); ?>"><?php echo apply_filters( 'the_title', $tip->post_title ); ?></a></li>
 						<?php endforeach; ?>
 					</ul>
 					<?php endif; ?>
