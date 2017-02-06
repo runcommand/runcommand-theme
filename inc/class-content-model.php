@@ -70,18 +70,6 @@ class Content_Model extends Controller {
 			return str_replace( '&#8211;', '--', $title );
 		});
 
-		// Inject the Buy Now button into premium commands
-		add_filter( 'the_content', function( $content ) {
-			$button_label = get_post_meta( get_the_ID(), 'purchase_button_label', true );
-			$button_url = get_post_meta( get_the_ID(), 'purchase_button_url', true );
-			if ( ! $button_label || ! $button_url ) {
-				return $content;
-			}
-			$button = '<a class="button right" href="' . esc_url( $button_url ) . '">' . esc_html( $button_label ) . '</a>';
-			$search = stripos( $content, '## Overview' ) ? '## Overview' : '## Using';
-			return str_replace( $search, $button . PHP_EOL . PHP_EOL . $search, $content );
-		}, 0 );
-
 		$markdown_convert = function( $string ) {
 			$environment = Environment::createCommonMarkEnvironment();
 			$environment->addExtension( new TableExtension() );
