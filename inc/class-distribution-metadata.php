@@ -5,7 +5,7 @@ namespace runcommand;
 class Distribution_Metadata extends Controller {
 
 	protected static $default_title = 'runcommand';
-	protected static $default_description = 'Premium WP-CLI commands and support';
+	protected static $default_description = 'The fastest way to do anything with WordPress';
 
 	protected function setup_actions() {
 		add_action( 'wp_head', array( $this, 'action_wp_head' ) );

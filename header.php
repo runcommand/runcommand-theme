@@ -25,13 +25,6 @@
 			<div class="columns medium-5 large-6">
 				<a class="site-title" href="<?php echo home_url( '/' ); ?>"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/running-man.svg' ); ?>">runcommand</a>
 			</div>
-			<div class="columns medium-6 medium-offset-1 large-5">
-				<ul class="inline-list header-nav">
-					<li><a href="<?php echo esc_url( home_url( 'for-hosts/' ) ); ?>">For Hosts</a></li>
-					<li><a href="<?php echo esc_url( home_url( 'for-agencies/' ) ); ?>">For Agencies</a></li>
-					<li><a href="<?php echo esc_url( home_url( 'pricing/' ) ); ?>">Pricing</a></li>
-				</ul>
-			</div>
 		</div>
 	</header>
 

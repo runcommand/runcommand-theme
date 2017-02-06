@@ -8,12 +8,9 @@
 				<div class="page-content">
 
 					<div class="promo">
-						<span class="break-medium-up"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">runcommand</a> is the first of its kind,</span> blending enterprise support and custom development to effectively maintain the WP-CLI infrastructure your WordPress-based business depends on.
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>">runcommand</a> maintains <a href="https://wp-cli.org">WP-CLI</a>, "a command-line interface that is deployed and relied upon by almost every major user of WordPress out there."
 					</div>
 
-					<div class="promo">
-						Learn more: runcommand for <a href="<?php echo home_url( 'for-hosts/' ); ?>">managed WordPress hosts</a> and <a href="<?php echo home_url( 'for-agencies/' ); ?>">WordPress agencies</a>.
-					</div>
 				</div>
 
 			</div>
