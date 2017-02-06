@@ -1,12 +1,5 @@
 
 	<footer class="site-footer">
-		<?php if ( empty( get_queried_object()->post_content ) || ! has_shortcode( get_queried_object()->post_content, 'newsletter-signup' ) ) : ?>
-		<div class="row">
-			<div class="columns">
-				<?php echo \runcommand::get_template_part( 'newsletter-signup' ); ?>
-			</div>
-		</div>
-		<?php endif; ?>
 		<div class="row">
 			<div class="columns medium-3">
 				<h4><a href="<?php echo esc_url( home_url( '/' ) ); ?>">runcommand</a></h4>

@@ -70,12 +70,6 @@ class Content_Model extends Controller {
 			return str_replace( '&#8211;', '--', $title );
 		});
 
-		// Inject the newsletter signup form before Using
-		add_filter( 'the_content', function( $content ){
-			$search = '## Using';
-			return str_replace( $search, '[newsletter-signup]' . PHP_EOL . PHP_EOL . $search, $content );
-		}, 0 );
-
 		// Inject the Buy Now button into premium commands
 		add_filter( 'the_content', function( $content ) {
 			$button_label = get_post_meta( get_the_ID(), 'purchase_button_label', true );
@@ -223,9 +217,6 @@ class Content_Model extends Controller {
 	public function action_init_register_shortcodes() {
 		add_shortcode( 'pricing-grid', function() {
 			return \runcommand::get_template_part( 'pricing-grid' );
-		});
-		add_shortcode( 'newsletter-signup', function() {
-			return \runcommand::get_template_part( 'newsletter-signup' );
 		});
 	}
 
