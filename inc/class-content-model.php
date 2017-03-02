@@ -77,7 +77,7 @@ class Content_Model extends Controller {
 			$retval = $converter->convertToHtml( $string );
 			return str_replace( '<br>', '', $retval );
 		};
-		foreach( array( 'the_excerpt', 'the_content' ) as $filter ) {
+		foreach( array( 'the_excerpt', 'the_content', 'the_excerpt_export', 'the_content_export' ) as $filter ) {
 			add_filter( $filter, $markdown_convert, 0 );
 		}
 
