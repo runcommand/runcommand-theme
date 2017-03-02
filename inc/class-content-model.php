@@ -40,7 +40,7 @@ class Content_Model extends Controller {
 				exit;
 			}
 
-			if ( is_singular( array( 'tip' ) ) || is_post_type_archive( array( 'tip' ) ) ){
+			if ( is_singular( array( 'tip', 'post' ) ) || is_post_type_archive( array( 'tip', 'post' ) ) ){
 				wp_redirect( 'https://danielbachhuber.com/' . $wp->request, 301 );
 				exit;
 			}
