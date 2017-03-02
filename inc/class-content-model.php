@@ -40,6 +40,11 @@ class Content_Model extends Controller {
 				exit;
 			}
 
+			if ( 0 === stripos( $wp->request, 'tip' ) ){
+				wp_redirect( 'https://danielbachhuber.com/' . $wp->request, 301 );
+				exit;
+			}
+
 		});
 	}
 
